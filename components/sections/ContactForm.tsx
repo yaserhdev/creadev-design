@@ -251,8 +251,8 @@ export default function ContactForm() {
         <div className="space-y-3 text-gray-700">
           <p>
             <strong className="text-gray-900">Email:</strong>{' '}
-            <a href="mailto:info@creadevdesign.com" className="text-brand-purple hover:underline">
-              info@creadevdesign.com
+            <a href="mailto:yaser@creadevdesign.com" className="text-brand-purple hover:underline">
+              yaser@creadevdesign.com
             </a>
           </p>
           <p>
