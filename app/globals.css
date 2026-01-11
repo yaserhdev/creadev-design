@@ -6,8 +6,15 @@
 }
 
 @theme inline {
+  /* Background and foreground colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* CreaDev brand colors */
+  --color-brand-pink: #ec4899;
+  --color-brand-purple: #8b5cf6;
+  
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
