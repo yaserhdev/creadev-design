@@ -23,7 +23,7 @@ export const projects: Project[] = [
     image: '/images/projects/delavilla.jpg', // We'll add placeholder
     category: 'E-commerce',
     tags: ['Next.js', 'Shopify', 'GSAP', 'E-commerce'],
-    link: 'https://delavillaproductions.com',
+    link: 'https://delavillaprod.com',
     caseStudy: {
       problem: 'Video production company needed modern portfolio site with e-commerce capabilities',
       solution: 'Cinematic design with video backgrounds, Shopify integration for merchandise sales',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     image: '/images/projects/mrxtractor.jpg', // We'll add placeholder
     category: 'Business Website',
     tags: ['React', 'Three.js', 'GSAP', 'Animations'],
-    link: 'https://mrxtractor.com',
+    link: 'https://mrxtractorautodetailing.com',
     caseStudy: {
       problem: 'Local auto detailing business needed engaging online presence',
       solution: '3D physics-based review carousel, infinite gallery with GSAP animations',
@@ -53,6 +53,7 @@ export const projects: Project[] = [
     image: '/images/projects/noosh.jpg', // We'll add placeholder
     category: 'Business Website',
     tags: ['React', 'Three.js', 'Interactive Menu'],
+    link: 'https://eatnoosh.com',
     caseStudy: {
       problem: 'Restaurant needed modern website to showcase menu and customer reviews',
       solution: '3D rotating review carousel and interactive digital menu system',
