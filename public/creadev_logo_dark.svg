@@ -1,0 +1,37 @@
+<svg width="280" height="60" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="grad6b" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <linearGradient id="gradUnderlineLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Left C mark -->
+  <g transform="translate(67.2, 12.2)">
+    <path d="M20 0 C9 0 0 9 0 20 C0 31 9 40 20 40 L27 40 L27 29 L20 29 C15 29 11 25 11 20 C11 15 15 11 20 11 L27 11 L27 0 Z" fill="url(#grad6)"/>
+  </g>
+  
+  <!-- Right D mark -->
+  <g transform="translate(182.8, 12.2)">
+    <path d="M7 0 C18 0 27 9 27 20 C27 31 18 40 7 40 L0 40 L0 29 L7 29 C12 29 16 25 16 20 C16 15 12 11 7 11 L0 11 L0 0 Z" fill="url(#grad6b)"/>
+  </g>
+  
+  <!-- CREADEV with larger C and D -->
+  <text x="138" y="32" text-anchor="middle" font-family="'Outfit', sans-serif" font-weight="700" fill="#ffffff">
+    <tspan font-size="18" dy="-6.9">C</tspan><tspan font-size="14" dy="-2.7">REA</tspan><tspan font-size="18" dy="2.7">D</tspan><tspan font-size="14" dy="-2.7">EV</tspan>
+  </text>
+  
+  <!-- Underline for REA -->
+  <rect x="102.3" y="30.5" width="71.5" height="4" rx="2" fill="url(#gradUnderlineLeft)"/>
+  
+  <!-- DESIGN matched width -->
+  <text x="140.6" y="52" text-anchor="middle" font-family="'Outfit', sans-serif" font-size="14" font-weight="400" fill="#888888" letter-spacing="4.5">DESIGN</text>
+</svg>
