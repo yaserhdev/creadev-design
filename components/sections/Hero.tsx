@@ -15,20 +15,19 @@ export default function Hero() {
           {/* Animated Heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <CharacterAnimation 
-              text="CreaDev Design"
+              text="Professional Web Development for Virginia Businesses"
               className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent"
             />
           </h1>
           
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-gray-700 mb-4">
-            Professional Web Development in Fairfax, VA
+            Custom websites that convert visitors into customers — built with modern technology and designed to grow with your business
           </p>
           
           {/* Description */}
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Custom websites, e-commerce solutions, and modern web applications 
-            built with precision and creativity.
+            Transform your online presence with a website that works as hard as you do. Based in Fairfax, Virginia, we specialize in creating fast, beautiful, and effective websites for small businesses and entrepreneurs.
           </p>
           
           {/* CTA Buttons */}

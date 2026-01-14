@@ -51,25 +51,25 @@ export default function Logo3DMorph() {
         }
 
         .bracket-c {
-          animation: slideC 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: slideC 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           animation-delay: 0.3s;
           transform: translate(110px, 12.2px);
         }
 
         .bracket-d {
-          animation: slideD 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: slideD 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           animation-delay: 0.3s;
           transform: translate(143px, 12.2px);
         }
 
         .text-reveal-rect {
-          animation: expandFromCenter 3.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: expandFromCenter 4.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           animation-delay: 0.4s;
         }
       `}</style>
 
       {/* Logo Container */}
-      <div className="relative w-[420px] h-[90px] flex items-center justify-center overflow-hidden">
+      <div className="relative w-[420px] h-[90px] flex items-center justify-center">
         <svg 
           width="420" 
           height="90" 

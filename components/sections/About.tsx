@@ -1,5 +1,4 @@
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
-import Image from 'next/image';
 
 export default function About() {
   const stats = [
@@ -7,6 +6,25 @@ export default function About() {
     { number: '10+', label: 'Projects Completed' },
     { number: '100%', label: 'Client Satisfaction' },
     { number: '24hr', label: 'Response Time' },
+  ];
+
+  const whyChooseUs = [
+    {
+      title: 'Freelance Flexibility with Agency-Level Quality',
+      description: 'Get the personal attention and direct communication of working with a freelancer, combined with the professional standards and reliability you\'d expect from an established agency.'
+    },
+    {
+      title: 'Based Locally in Fairfax, Virginia',
+      description: 'Being local means better communication, faster response times, and a deep understanding of the Northern Virginia business landscape. Need to meet in person? No problem.'
+    },
+    {
+      title: 'Modern Technologies, Timeless Design',
+      description: 'I build with the latest web technologies (React, Next.js, TypeScript) to ensure your site is fast, secure, and future-proof — while maintaining a clean, professional design that won\'t look dated in 5 years.'
+    },
+    {
+      title: 'Transparent Pricing, No Surprises',
+      description: 'Clear project scopes, detailed quotes, and regular communication mean you always know what you\'re paying for. No hidden fees, no scope creep, no surprises.'
+    }
   ];
 
   return (
@@ -49,24 +67,32 @@ export default function About() {
                     presence with custom websites that actually work.
                   </p>
                   <p>
-                    No cookie-cutter templates, no bloated code—just clean, fast, professional 
-                    websites built specifically for your needs.
+                    <strong>No cookie-cutter templates, no bloated code</strong> — just clean, 
+                    fast, professional websites built specifically for your needs.
                   </p>
                   <p>
                     I combine technical expertise with creative problem-solving to deliver 
-                    websites that not only look great but drive real business results.
+                    websites that not only look great but drive real business results. Every 
+                    project is a partnership, and your success is my success.
                   </p>
                 </div>
+              </ScrollAnimation>
+            </div>
+          </div>
 
-                {/* Key Points */}
-                <div className="mt-8 space-y-3">
-                  {[
-                    'Freelance flexibility with agency-level quality',
-                    'Based locally in Fairfax, Virginia',
-                    'Modern technologies, timeless design',
-                    'Transparent pricing, no surprises'
-                  ].map((point, index) => (
-                    <div key={index} className="flex items-start">
+          {/* Why Choose Us Section */}
+          <div className="mt-16">
+            <ScrollAnimation delay={0.3}>
+              <h3 className="text-3xl font-bold mb-8 text-center">
+                Why Choose CreaDev Design?
+              </h3>
+            </ScrollAnimation>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {whyChooseUs.map((item, index) => (
+                <ScrollAnimation key={index} delay={0.1 * (index + 4)}>
+                  <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="flex items-start mb-3">
                       <svg 
                         className="w-6 h-6 text-brand-purple mr-3 mt-1 flex-shrink-0" 
                         fill="currentColor" 
@@ -78,11 +104,12 @@ export default function About() {
                           clipRule="evenodd" 
                         />
                       </svg>
-                      <span className="text-gray-700">{point}</span>
+                      <h4 className="text-xl font-bold text-gray-900">{item.title}</h4>
                     </div>
-                  ))}
-                </div>
-              </ScrollAnimation>
+                    <p className="text-gray-600 ml-9">{item.description}</p>
+                  </div>
+                </ScrollAnimation>
+              ))}
             </div>
           </div>
 
