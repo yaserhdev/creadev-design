@@ -12,12 +12,13 @@ export default function Hero() {
             <Logo3D />
           </div>
           
-          {/* Animated Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <CharacterAnimation 
-              text="Professional Web Development for Virginia Businesses"
-              className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent"
-            />
+          {/* Animated Heading - Scales down properly, wraps if needed */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight px-4">
+            <span className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
+              <CharacterAnimation 
+                text="Professional Web Development"
+              />
+            </span>
           </h1>
           
           {/* Tagline */}

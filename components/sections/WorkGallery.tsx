@@ -1,9 +1,17 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
 import { projects, categories } from '@/lib/data/projects';
 import Link from 'next/link';
+
+// Map project slugs to their screenshot paths
+const projectImages: Record<string, string> = {
+  'noosh-grill': '/images/projects/noosh_grill.png',
+  'delavilla-productions': '/images/projects/de_la_villa.png',
+  'mr-xtractor': '/images/projects/mr_xtractor.png',
+};
 
 export default function WorkGallery() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -53,14 +61,25 @@ export default function WorkGallery() {
               <Link href={`/work/${project.slug}`}>
                 <div className="group cursor-pointer">
                   <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                    {/* Project Image - Placeholder with gradient */}
-                    <div className="aspect-video bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink opacity-80 group-hover:opacity-100 transition-opacity">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-6xl">🚀</span>
-                      </div>
+                    {/* Project Image */}
+                    <div className="aspect-video relative bg-gray-100">
+                      {projectImages[project.slug] ? (
+                        <Image
+                          src={projectImages[project.slug]}
+                          alt={`${project.title} - ${project.description}`}
+                          fill
+                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      ) : (
+                        // Fallback gradient for projects without screenshots
+                        <div className="w-full h-full bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <span className="text-6xl">🚀</span>
+                        </div>
+                      )}
                     </div>
 
-                    {/* Overlay */}
+                    {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                       <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         <p className="text-sm mb-2">View Case Study →</p>

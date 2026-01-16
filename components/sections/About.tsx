@@ -1,4 +1,5 @@
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import Image from 'next/image';
 
 export default function About() {
   const stats = [
@@ -36,14 +37,15 @@ export default function About() {
             <ScrollAnimation>
               <div className="relative">
                 <div className="aspect-square bg-gradient-to-br from-brand-pink to-brand-purple rounded-2xl p-1">
-                  <div className="w-full h-full bg-white rounded-2xl flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="text-8xl mb-4">👨‍💻</div>
-                      <p className="text-2xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                        Yaser
-                      </p>
-                      <p className="text-gray-600 mt-2">Founder & Lead Developer</p>
-                    </div>
+                  <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/headshot.jpg"
+                      alt="Yaser - Founder & Lead Developer at CreaDev Design"
+                      width={600}
+                      height={600}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
                   </div>
                 </div>
                 
@@ -88,10 +90,11 @@ export default function About() {
               </h3>
             </ScrollAnimation>
 
+            {/* Grid with equal height cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {whyChooseUs.map((item, index) => (
-                <ScrollAnimation key={index} delay={0.1 * (index + 4)}>
-                  <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                <ScrollAnimation key={index} delay={0.1 * (index + 4)} className="h-full">
+                  <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                     <div className="flex items-start mb-3">
                       <svg 
                         className="w-6 h-6 text-brand-purple mr-3 mt-1 flex-shrink-0" 
@@ -106,25 +109,25 @@ export default function About() {
                       </svg>
                       <h4 className="text-xl font-bold text-gray-900">{item.title}</h4>
                     </div>
-                    <p className="text-gray-600 ml-9">{item.description}</p>
+                    <p className="text-gray-600 ml-9 flex-grow">{item.description}</p>
                   </div>
                 </ScrollAnimation>
               ))}
             </div>
           </div>
 
-          {/* Stats Section */}
+          {/* Stats Section - Responsive sizing */}
           <ScrollAnimation delay={0.4}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-gray-200">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-16 pt-16 border-t border-gray-200">
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
-                  className="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
+                  className="text-center p-4 lg:p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 font-medium">
+                  <div className="text-sm sm:text-base text-gray-600 font-medium">
                     {stat.label}
                   </div>
                 </div>

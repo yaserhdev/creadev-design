@@ -14,21 +14,7 @@ export default function Logo3DMorph() {
 
   return (
     <div className="relative flex items-center justify-center">
-      {/* Glow effect */}
-      <div
-        className="absolute inset-0 rounded-full opacity-30 blur-[60px]"
-        style={{
-          background: 'linear-gradient(135deg, #ec4899, #8b5cf6)',
-          animation: 'pulse 2s ease-in-out infinite',
-        }}
-      />
-
       <style jsx>{`
-        @keyframes pulse {
-          0%, 100% { transform: scale(1); opacity: 0.3; }
-          50% { transform: scale(1.2); opacity: 0.5; }
-        }
-
         @keyframes slideC {
           from { transform: translate(110px, 12.2px); }
           to { transform: translate(67.2px, 12.2px); }
@@ -68,11 +54,11 @@ export default function Logo3DMorph() {
         }
       `}</style>
 
-      {/* Logo Container */}
-      <div className="relative w-[420px] h-[90px] flex items-center justify-center">
+      {/* Logo Container - Made bigger (600px from 420px) */}
+      <div className="relative w-[600px] h-[130px] flex items-center justify-center">
         <svg 
-          width="420" 
-          height="90" 
+          width="600" 
+          height="130" 
           viewBox="0 0 280 60"
           className="drop-shadow-2xl"
         >

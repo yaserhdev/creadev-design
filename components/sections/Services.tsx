@@ -17,11 +17,11 @@ export default function Services() {
           </ScrollAnimation>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - Added h-full to make cards equal height */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <ScrollAnimation key={service.id} delay={index * 0.1}>
-              <div className="group p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-2">
+            <ScrollAnimation key={service.id} delay={index * 0.1} className="h-full">
+              <div className="group p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
                 {/* Icon */}
                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
@@ -37,8 +37,8 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                {/* Features List */}
-                <ul className="space-y-2">
+                {/* Features List - flex-grow pushes this to fill remaining space */}
+                <ul className="space-y-2 flex-grow">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
                       <svg 
