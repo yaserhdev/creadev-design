@@ -58,58 +58,60 @@ export default function WorkGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {filteredProjects.map((project, index) => (
             <ScrollAnimation key={project.id} delay={index * 0.1}>
-              <Link href={`/work/${project.slug}`}>
-                <div className="group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                    {/* Project Image */}
-                    <div className="aspect-video relative bg-gray-100">
-                      {projectImages[project.slug] ? (
-                        <Image
-                          src={projectImages[project.slug]}
-                          alt={`${project.title} - ${project.description}`}
-                          fill
-                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      ) : (
-                        // Fallback gradient for projects without screenshots
-                        <div className="w-full h-full bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                          <span className="text-6xl">🚀</span>
+              <div className="h-full">
+                <Link href={`/work/${project.slug}`}>
+                  <div className="group cursor-pointer h-full flex flex-col">
+                    <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                      {/* Project Image */}
+                      <div className="aspect-video relative bg-gray-100">
+                        {projectImages[project.slug] ? (
+                          <Image
+                            src={projectImages[project.slug]}
+                            alt={`${project.title} - ${project.description}`}
+                            fill
+                            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        ) : (
+                          // Fallback gradient for projects without screenshots
+                          <div className="w-full h-full bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span className="text-6xl">🚀</span>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Hover Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                          <p className="text-sm mb-2">View Case Study →</p>
                         </div>
-                      )}
+                      </div>
                     </div>
 
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                      <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                        <p className="text-sm mb-2">View Case Study →</p>
+                    {/* Project Info */}
+                    <div className="mt-4 flex-grow flex flex-col">
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-purple transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 flex-grow">
+                        {project.description}
+                      </p>
+
+                      {/* Tags - pinned to bottom */}
+                      <div className="flex flex-wrap gap-2 mt-auto">
+                        {project.tags.map((tag) => (
+                          <span 
+                            key={tag}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full group-hover:bg-brand-purple group-hover:text-white transition-colors"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   </div>
-
-                  {/* Project Info */}
-                  <div className="mt-4">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-purple transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {project.description}
-                    </p>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span 
-                          key={tag}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full group-hover:bg-brand-purple group-hover:text-white transition-colors"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </ScrollAnimation>
           ))}
         </div>
