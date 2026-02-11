@@ -113,7 +113,7 @@ export default function Logo3DMorph() {
               textAnchor="middle" 
               fontFamily="'Outfit', sans-serif" 
               fontWeight="700" 
-              fill="#171717"
+              fill="#ffffffff"
             >
               <tspan fontSize="18" dy="-6.9">C</tspan>
               <tspan fontSize="14" dy="-2.7">REA</tspan>

@@ -29,7 +29,7 @@ export default function About() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

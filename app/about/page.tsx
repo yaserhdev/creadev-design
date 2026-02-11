@@ -97,7 +97,7 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.1}>
                 <div className="text-center p-8 bg-white rounded-xl shadow-lg">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    2+
+                    3+
                   </div>
                   <div className="text-gray-600 font-medium">Years Experience</div>
                 </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.2}>
                 <div className="text-center p-8 bg-white rounded-xl shadow-lg">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    10+
+                    4
                   </div>
                   <div className="text-gray-600 font-medium">Projects Delivered</div>
                 </div>
@@ -124,9 +124,9 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.4}>
                 <div className="text-center p-8 bg-white rounded-xl shadow-lg">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    $75
+                    3
                   </div>
-                  <div className="text-gray-600 font-medium">Hourly Rate</div>
+                  <div className="text-gray-600 font-medium">Industries Served</div>
                 </div>
               </ScrollAnimation>
             </div>

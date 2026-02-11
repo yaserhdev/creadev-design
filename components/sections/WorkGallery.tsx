@@ -21,7 +21,7 @@ export default function WorkGallery() {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12">
@@ -36,7 +36,7 @@ export default function WorkGallery() {
         </div>
 
         {/* Filter Buttons */}
-        <ScrollAnimation delay={0.2}>
+        {/* <ScrollAnimation delay={0.2}>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button
@@ -52,7 +52,7 @@ export default function WorkGallery() {
               </button>
             ))}
           </div>
-        </ScrollAnimation>
+        </ScrollAnimation> */}
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">

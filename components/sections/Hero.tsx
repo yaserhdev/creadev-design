@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-white via-purple-50 to-pink-50">
+    <section className="relative min-h-[80vh] flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* 3D Rotating Logo */}
