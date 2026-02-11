@@ -51,19 +51,19 @@ export default function WorkPage() {
               
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="p-4 bg-gray-900 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                     {totalProjects}
                   </div>
                   <div className="text-sm text-gray-300 mt-1">Projects</div>
                 </div>
-                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="p-4 bg-gray-900 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                     {industriesServed}
                   </div>
                   <div className="text-sm text-gray-300 mt-1">Industries</div>
                 </div>
-                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
+                <div className="p-4 bg-gray-900 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                     {totalTechnologies}
                   </div>
@@ -84,7 +84,7 @@ export default function WorkPage() {
             </ScrollAnimation>
 
             <ScrollAnimation delay={0.2}>
-              <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:border-brand-purple transition-all">
+              <div className="bg-gray-900 border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:border-brand-purple transition-all">
                 <div className="grid md:grid-cols-2 gap-0">
                   {/* Featured Image */}
                   <div className="relative aspect-video md:aspect-auto">
@@ -119,7 +119,7 @@ export default function WorkPage() {
 
                     {/* Category Badge */}
                     <div className="mb-6">
-                      <span className="px-3 py-1 bg-white/10 text-gray-200 rounded-full text-sm font-medium border border-white/20">
+                      <span className="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm font-medium border border-white/20">
                         {featuredProject.category}
                       </span>
                     </div>
@@ -131,7 +131,7 @@ export default function WorkPage() {
                         {featuredProject.tags.slice(0, 5).map((tag) => (
                           <span 
                             key={tag}
-                            className="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full border border-white/10"
+                            className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-white/10"
                           >
                             {tag}
                           </span>
@@ -186,10 +186,10 @@ export default function WorkPage() {
                 <ScrollAnimation key={project.id} delay={index * 0.1}>
                   <div className="h-full">
                     <Link href={`/work/${project.slug}`}>
-                      <div className="group cursor-pointer h-full flex flex-col bg-white/5 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-white/10 transition-all duration-300">
+                      <div className="group cursor-pointer h-full flex flex-col bg-gray-900 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-gray-800 transition-all duration-300">
                         {/* Project Image */}
                         <div className="relative overflow-hidden rounded-t-xl">
-                          <div className="aspect-video relative bg-gray-900">
+                          <div className="aspect-video relative bg-gray-800">
                             {projectImages[project.slug] ? (
                               <Image
                                 src={projectImages[project.slug]}
@@ -237,7 +237,7 @@ export default function WorkPage() {
                               {project.tags.map((tag) => (
                                 <span 
                                   key={tag}
-                                  className="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
+                                  className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
                                 >
                                   {tag}
                                 </span>

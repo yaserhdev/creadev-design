@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function About() {
   const stats = [
     { number: '3+', label: 'Years Experience' },
-    { number: '4+', label: 'Projects Completed' },
+    { number: '10+', label: 'Projects Completed' },
     { number: '100%', label: 'Client Satisfaction' },
     { number: '24hr', label: 'Response Time' },
   ];
@@ -94,7 +94,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {whyChooseUs.map((item, index) => (
                 <ScrollAnimation key={index} delay={0.1 * (index + 4)} className="h-full">
-                  <div className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
+                  <div className="p-6 bg-gray-900 border border-white/10 rounded-xl shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                     <div className="flex items-start mb-3">
                       <svg 
                         className="w-6 h-6 text-brand-purple mr-3 mt-1 flex-shrink-0" 
@@ -107,7 +107,7 @@ export default function About() {
                           clipRule="evenodd" 
                         />
                       </svg>
-                      <h4 className="text-xl font-bold text-gray-900">{item.title}</h4>
+                      <h4 className="text-xl font-bold text-white">{item.title}</h4>
                     </div>
                     <p className="text-gray-600 ml-9 flex-grow">{item.description}</p>
                   </div>
@@ -122,7 +122,7 @@ export default function About() {
               {stats.map((stat, index) => (
                 <div 
                   key={index} 
-                  className="text-center p-4 lg:p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
+                  className="text-center p-4 lg:p-6 rounded-xl bg-gray-900 border border-white/10 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     {stat.number}

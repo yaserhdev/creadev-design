@@ -21,7 +21,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ScrollAnimation key={service.id} delay={index * 0.1} className="h-full">
-              <div className="group p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+              <div className="group p-8 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 h-full flex flex-col bg-gray-900">
                 {/* Icon */}
                 <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                   {service.icon}

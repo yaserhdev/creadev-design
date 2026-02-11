@@ -250,16 +250,16 @@ export default function ContactForm() {
         <h3 className="text-2xl font-bold mb-4">Other Ways to Reach Me</h3>
         <div className="space-y-3 text-gray-700">
           <p>
-            <strong className="text-gray-900">Email:</strong>{' '}
+            <strong className="text-white">Email:</strong>{' '}
             <a href="mailto:yaser@creadevdesign.com" className="text-brand-purple hover:underline">
               yaser@creadevdesign.com
             </a>
           </p>
           <p>
-            <strong className="text-gray-900">Location:</strong> Fairfax, Virginia
+            <strong className="text-white">Location:</strong> Fairfax, Virginia
           </p>
           <p>
-            <strong className="text-gray-900">Response Time:</strong> Within 24 hours
+            <strong className="text-white">Response Time:</strong> Within 24 hours
           </p>
         </div>
       </div>

@@ -50,7 +50,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <ScrollAnimation key={service.id} delay={index * 0.1}>
-                <div className="group p-8 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+                <div className="group p-8 bg-gray-900 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-gray-800 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
                   {/* Icon */}
                   <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -104,7 +104,7 @@ export default function ServicesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ScrollAnimation delay={0.1}>
-                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="p-6 bg-gray-900 rounded-xl border border-white/10 hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">🎯</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Tailored Solutions</h3>
                   <p className="text-gray-300">
@@ -115,7 +115,7 @@ export default function ServicesPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
-                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="p-6 bg-gray-900 rounded-xl border border-white/10 hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">⚡</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Performance First</h3>
                   <p className="text-gray-300">
@@ -126,7 +126,7 @@ export default function ServicesPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="p-6 bg-gray-900 rounded-xl border border-white/10 hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">📱</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Mobile-First Design</h3>
                   <p className="text-gray-300">
@@ -137,7 +137,7 @@ export default function ServicesPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
-                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="p-6 bg-gray-900 rounded-xl border border-white/10 hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">🤝</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Local & Reliable</h3>
                   <p className="text-gray-300">

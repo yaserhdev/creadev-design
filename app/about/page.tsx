@@ -95,7 +95,7 @@ export default function AboutPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ScrollAnimation delay={0.1}>
-                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
+                <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     3+
                   </div>
@@ -104,7 +104,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
-                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
+                <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     4
                   </div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
+                <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     100%
                   </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
-                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
+                <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     3
                   </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <ScrollAnimation delay={0.1}>
-                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
+                <div className="p-8 bg-gray-900 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">🎯</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Quality Over Quantity</h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -155,7 +155,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
-                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
+                <div className="p-8 bg-gray-900 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">💬</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Clear Communication</h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -165,7 +165,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
+                <div className="p-8 bg-gray-900 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">⚡</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Performance First</h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -175,7 +175,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
-                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
+                <div className="p-8 bg-gray-900 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">🎨</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Custom Solutions</h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -185,7 +185,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.5}>
-                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
+                <div className="p-8 bg-gray-900 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">💰</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Transparent Pricing</h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -195,7 +195,7 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.6}>
-                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
+                <div className="p-8 bg-gray-900 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-gray-800 transition-all">
                   <div className="text-4xl mb-4">🤝</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Long-term Partnership</h3>
                   <p className="text-gray-300 leading-relaxed">
@@ -228,7 +228,7 @@ export default function AboutPage() {
                       {techs.map((tech) => (
                         <span 
                           key={tech}
-                          className="px-4 py-2 bg-white/5 text-gray-200 rounded-lg border border-white/10 hover:bg-white/10 hover:border-brand-purple transition-all font-medium"
+                          className="px-4 py-2 bg-gray-900 text-gray-200 rounded-lg border border-white/10 hover:bg-gray-800 hover:border-brand-purple transition-all font-medium"
                         >
                           {tech}
                         </span>
@@ -240,7 +240,7 @@ export default function AboutPage() {
             </div>
 
             <ScrollAnimation delay={0.5}>
-              <div className="mt-12 p-8 bg-white/5 rounded-xl border border-white/10">
+              <div className="mt-12 p-8 bg-gray-900 rounded-xl border border-white/10">
                 <p className="text-center text-gray-300 leading-relaxed">
                   <strong className="text-brand-purple">Specialties:</strong> Tailwind CSS for rapid, responsive design • GSAP for buttery-smooth animations • Next.js for performance • Shopify API integration for e-commerce
                 </p>
