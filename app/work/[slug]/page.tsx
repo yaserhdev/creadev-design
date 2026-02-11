@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen text-foreground">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
         <div className="container mx-auto px-4">

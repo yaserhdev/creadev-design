@@ -23,7 +23,7 @@ const technologies = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen text-foreground">
       {/* Hero Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">

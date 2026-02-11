@@ -36,38 +36,38 @@ export default function WorkPage() {
   const industriesServed = Array.from(new Set(projects.map(p => p.category))).length;
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen text-foreground">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                 Our Work
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Custom websites and digital experiences that drive results for businesses across Virginia
               </p>
               
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="p-4 bg-white rounded-xl shadow-md">
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                     {totalProjects}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">Projects</div>
+                  <div className="text-sm text-gray-300 mt-1">Projects</div>
                 </div>
-                <div className="p-4 bg-white rounded-xl shadow-md">
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                     {industriesServed}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">Industries</div>
+                  <div className="text-sm text-gray-300 mt-1">Industries</div>
                 </div>
-                <div className="p-4 bg-white rounded-xl shadow-md">
+                <div className="p-4 bg-white/5 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                     {totalTechnologies}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1">Technologies</div>
+                  <div className="text-sm text-gray-300 mt-1">Technologies</div>
                 </div>
               </div>
             </ScrollAnimation>
@@ -76,15 +76,15 @@ export default function WorkPage() {
       </section>
 
       {/* Featured Project */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Project</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-100">Featured Project</h2>
             </ScrollAnimation>
 
             <ScrollAnimation delay={0.2}>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:border-brand-purple transition-all">
                 <div className="grid md:grid-cols-2 gap-0">
                   {/* Featured Image */}
                   <div className="relative aspect-video md:aspect-auto">
@@ -109,35 +109,35 @@ export default function WorkPage() {
                       Featured
                     </div>
                     
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4 text-gray-100">
                       {featuredProject.title}
                     </h3>
                     
-                    <p className="text-lg text-gray-600 mb-6">
+                    <p className="text-lg text-gray-300 mb-6">
                       {featuredProject.description}
                     </p>
 
                     {/* Category Badge */}
                     <div className="mb-6">
-                      <span className="px-3 py-1 bg-white text-gray-700 rounded-full text-sm font-medium shadow-sm">
+                      <span className="px-3 py-1 bg-white/10 text-gray-200 rounded-full text-sm font-medium border border-white/20">
                         {featuredProject.category}
                       </span>
                     </div>
 
                     {/* Tech Stack Preview */}
                     <div className="mb-6">
-                      <p className="text-sm font-semibold text-gray-700 mb-2">Technologies:</p>
+                      <p className="text-sm font-semibold text-gray-200 mb-2">Technologies:</p>
                       <div className="flex flex-wrap gap-2">
                         {featuredProject.tags.slice(0, 5).map((tag) => (
                           <span 
                             key={tag}
-                            className="px-3 py-1 bg-white text-gray-600 text-sm rounded-full shadow-sm"
+                            className="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full border border-white/10"
                           >
                             {tag}
                           </span>
                         ))}
                         {featuredProject.tags.length > 5 && (
-                          <span className="px-3 py-1 text-gray-500 text-sm">
+                          <span className="px-3 py-1 text-gray-400 text-sm">
                             +{featuredProject.tags.length - 5} more
                           </span>
                         )}
@@ -172,12 +172,12 @@ export default function WorkPage() {
       </section>
 
       {/* All Projects Grid */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">All Projects</h2>
-              <p className="text-gray-600 text-center mb-12">Explore our complete portfolio</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-100">All Projects</h2>
+              <p className="text-gray-300 text-center mb-12">Explore our complete portfolio</p>
             </ScrollAnimation>
 
             {/* Projects Grid - 2 columns for more detail */}
@@ -186,10 +186,10 @@ export default function WorkPage() {
                 <ScrollAnimation key={project.id} delay={index * 0.1}>
                   <div className="h-full">
                     <Link href={`/work/${project.slug}`}>
-                      <div className="group cursor-pointer h-full flex flex-col bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                      <div className="group cursor-pointer h-full flex flex-col bg-white/5 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-white/10 transition-all duration-300">
                         {/* Project Image */}
                         <div className="relative overflow-hidden rounded-t-xl">
-                          <div className="aspect-video relative bg-gray-100">
+                          <div className="aspect-video relative bg-gray-900">
                             {projectImages[project.slug] ? (
                               <Image
                                 src={projectImages[project.slug]}
@@ -217,27 +217,27 @@ export default function WorkPage() {
                         <div className="p-6 flex-grow flex flex-col">
                           {/* Category Badge */}
                           <div className="mb-3">
-                            <span className="px-3 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-brand-purple text-sm rounded-full font-medium">
+                            <span className="px-3 py-1 bg-brand-purple/20 text-brand-purple text-sm rounded-full font-medium border border-brand-purple/30">
                               {project.category}
                             </span>
                           </div>
 
-                          <h3 className="text-2xl md:text-3xl font-bold mb-3 group-hover:text-brand-purple transition-colors">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-100 group-hover:text-brand-purple transition-colors">
                             {project.title}
                           </h3>
                           
-                          <p className="text-gray-600 mb-4 flex-grow text-lg leading-relaxed">
+                          <p className="text-gray-300 mb-4 flex-grow text-lg leading-relaxed">
                             {project.description}
                           </p>
 
                           {/* Tech Stack */}
                           <div className="mb-4">
-                            <p className="text-sm font-semibold text-gray-700 mb-2">Technologies:</p>
+                            <p className="text-sm font-semibold text-gray-200 mb-2">Technologies:</p>
                             <div className="flex flex-wrap gap-2">
                               {project.tags.map((tag) => (
                                 <span 
                                   key={tag}
-                                  className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full group-hover:bg-brand-purple group-hover:text-white transition-colors"
+                                  className="px-3 py-1 bg-white/5 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
                                 >
                                   {tag}
                                 </span>
@@ -246,7 +246,7 @@ export default function WorkPage() {
                           </div>
 
                           {/* View Case Study Link */}
-                          <div className="mt-auto pt-4 border-t border-gray-200">
+                          <div className="mt-auto pt-4 border-t border-white/10">
                             <span className="text-brand-purple font-semibold group-hover:text-brand-pink transition-colors inline-flex items-center">
                               View Full Case Study
                               <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,14 +266,14 @@ export default function WorkPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
                 Let's Build Something Amazing
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Ready to bring your vision to life? Let's discuss your project and create a custom solution that exceeds expectations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
