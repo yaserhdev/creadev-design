@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function About() {
   const stats = [
-    { number: '2+', label: 'Years Experience' },
-    { number: '10+', label: 'Projects Completed' },
+    { number: '3+', label: 'Years Experience' },
+    { number: '4+', label: 'Projects Completed' },
     { number: '100%', label: 'Client Satisfaction' },
     { number: '24hr', label: 'Response Time' },
   ];

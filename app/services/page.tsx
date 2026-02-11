@@ -25,17 +25,17 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                 Our Services
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8">
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Comprehensive web development solutions tailored to your business needs
               </p>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                 From custom websites to e-commerce platforms, we provide end-to-end 
                 web development services that help your business succeed online.
               </p>
@@ -45,24 +45,24 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <ScrollAnimation key={service.id} delay={index * 0.1}>
-                <div className="group p-8 border border-gray-200 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+                <div className="group p-8 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
                   {/* Icon */}
                   <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-2xl font-bold mb-3 group-hover:text-brand-purple transition-colors">
+                  <h2 className="text-2xl font-bold mb-3 text-gray-100 group-hover:text-brand-purple transition-colors">
                     {service.title}
                   </h2>
 
                   {/* Description */}
-                  <p className="text-gray-600 mb-6 flex-grow">
+                  <p className="text-gray-300 mb-6 flex-grow">
                     {service.description}
                   </p>
 
@@ -81,7 +81,7 @@ export default function ServicesPage() {
                             clipRule="evenodd" 
                           />
                         </svg>
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -93,21 +93,21 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-4xl font-bold mb-12 text-center">
+              <h2 className="text-4xl font-bold mb-12 text-center text-gray-100">
                 Why Choose CreaDev Design?
               </h2>
             </ScrollAnimation>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ScrollAnimation delay={0.1}>
-                <div className="p-6 bg-white rounded-xl shadow-lg">
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
                   <div className="text-4xl mb-4">🎯</div>
-                  <h3 className="text-xl font-bold mb-3">Tailored Solutions</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Tailored Solutions</h3>
+                  <p className="text-gray-300">
                     No cookie-cutter templates. Every project is custom-built to match 
                     your unique brand and business goals.
                   </p>
@@ -115,10 +115,10 @@ export default function ServicesPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
-                <div className="p-6 bg-white rounded-xl shadow-lg">
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
                   <div className="text-4xl mb-4">⚡</div>
-                  <h3 className="text-xl font-bold mb-3">Performance First</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Performance First</h3>
+                  <p className="text-gray-300">
                     Fast-loading websites optimized for Core Web Vitals and top search 
                     engine rankings.
                   </p>
@@ -126,10 +126,10 @@ export default function ServicesPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <div className="p-6 bg-white rounded-xl shadow-lg">
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
                   <div className="text-4xl mb-4">📱</div>
-                  <h3 className="text-xl font-bold mb-3">Mobile-First Design</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Mobile-First Design</h3>
+                  <p className="text-gray-300">
                     Beautiful, responsive websites that work flawlessly on all devices 
                     from mobile to desktop.
                   </p>
@@ -137,10 +137,10 @@ export default function ServicesPage() {
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
-                <div className="p-6 bg-white rounded-xl shadow-lg">
+                <div className="p-6 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 transition-all">
                   <div className="text-4xl mb-4">🤝</div>
-                  <h3 className="text-xl font-bold mb-3">Local & Reliable</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Local & Reliable</h3>
+                  <p className="text-gray-300">
                     Based in Fairfax, Virginia with 24-hour response time and ongoing 
                     support for your peace of mind.
                   </p>
@@ -152,11 +152,11 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-4xl font-bold mb-12 text-center">
+              <h2 className="text-4xl font-bold mb-12 text-center text-gray-100">
                 Our Process
               </h2>
             </ScrollAnimation>
@@ -170,8 +170,8 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Discovery & Planning</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-100">Discovery & Planning</h3>
+                    <p className="text-gray-300">
                       We start by understanding your business, goals, and target audience. 
                       Then we create a detailed project plan and timeline.
                     </p>
@@ -187,8 +187,8 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Design & Development</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-100">Design & Development</h3>
+                    <p className="text-gray-300">
                       Our team designs and builds your website using modern technologies 
                       and best practices, with regular check-ins for your feedback.
                     </p>
@@ -204,8 +204,8 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Testing & Refinement</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-100">Testing & Refinement</h3>
+                    <p className="text-gray-300">
                       Rigorous testing across devices and browsers ensures everything works 
                       perfectly before launch.
                     </p>
@@ -221,8 +221,8 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Launch & Support</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-2xl font-bold mb-2 text-gray-100">Launch & Support</h3>
+                    <p className="text-gray-300">
                       We handle the technical launch details and provide ongoing support 
                       to keep your site running smoothly.
                     </p>

@@ -25,14 +25,14 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                 About CreaDev Design
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600">
+              <p className="text-xl md:text-2xl text-gray-300">
                 Professional web development built on quality, transparency, and results
               </p>
             </ScrollAnimation>
@@ -41,7 +41,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -56,15 +56,15 @@ export default function AboutPage() {
                     priority
                   />
                   {/* Decorative elements */}
-                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full -z-10"></div>
-                  <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-pink-100 to-purple-100 rounded-full -z-10"></div>
+                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full -z-10 blur-xl"></div>
+                  <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full -z-10 blur-xl"></div>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
                 <div>
-                  <h2 className="text-4xl font-bold mb-6">Hi, I'm Yaser</h2>
-                  <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+                  <h2 className="text-4xl font-bold mb-6 text-gray-100">Hi, I'm Yaser</h2>
+                  <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
                     <p>
                       I'm the developer behind CreaDev Design, and for over 2 years, I've been helping small businesses and entrepreneurs across Virginia establish their online presence with custom websites that actually work.
                     </p>
@@ -86,47 +86,47 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">By the Numbers</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-100">By the Numbers</h2>
             </ScrollAnimation>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <ScrollAnimation delay={0.1}>
-                <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     3+
                   </div>
-                  <div className="text-gray-600 font-medium">Years Experience</div>
+                  <div className="text-gray-300 font-medium">Years Experience</div>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
-                <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     4
                   </div>
-                  <div className="text-gray-600 font-medium">Projects Delivered</div>
+                  <div className="text-gray-300 font-medium">Projects Delivered</div>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     100%
                   </div>
-                  <div className="text-gray-600 font-medium">Client Satisfaction</div>
+                  <div className="text-gray-300 font-medium">Client Satisfaction</div>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
-                <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                <div className="text-center p-8 bg-white/5 rounded-xl border border-white/10 shadow-lg hover:bg-white/10 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                     3
                   </div>
-                  <div className="text-gray-600 font-medium">Industries Served</div>
+                  <div className="text-gray-300 font-medium">Industries Served</div>
                 </div>
               </ScrollAnimation>
             </div>
@@ -135,70 +135,70 @@ export default function AboutPage() {
       </section>
 
       {/* Approach Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">My Approach</h2>
-              <p className="text-xl text-gray-600 text-center mb-12">What makes CreaDev Design different</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">My Approach</h2>
+              <p className="text-xl text-gray-300 text-center mb-12">What makes CreaDev Design different</p>
             </ScrollAnimation>
 
             <div className="grid md:grid-cols-3 gap-8">
               <ScrollAnimation delay={0.1}>
-                <div className="p-8 border-2 border-gray-200 rounded-xl hover:border-brand-purple transition-colors">
+                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
                   <div className="text-4xl mb-4">🎯</div>
-                  <h3 className="text-xl font-bold mb-3">Quality Over Quantity</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Quality Over Quantity</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     I focus on delivering exceptional work for each client rather than juggling dozens of projects. Your website gets my full attention and expertise.
                   </p>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.2}>
-                <div className="p-8 border-2 border-gray-200 rounded-xl hover:border-brand-purple transition-colors">
+                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
                   <div className="text-4xl mb-4">💬</div>
-                  <h3 className="text-xl font-bold mb-3">Clear Communication</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Clear Communication</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     No technical jargon unless you want it. I explain everything in plain English and keep you updated throughout the entire development process.
                   </p>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.3}>
-                <div className="p-8 border-2 border-gray-200 rounded-xl hover:border-brand-purple transition-colors">
+                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
                   <div className="text-4xl mb-4">⚡</div>
-                  <h3 className="text-xl font-bold mb-3">Performance First</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Performance First</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Every website I build is optimized for speed, accessibility, and SEO from day one. Fast load times and smooth animations are standard, not extras.
                   </p>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
-                <div className="p-8 border-2 border-gray-200 rounded-xl hover:border-brand-purple transition-colors">
+                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
                   <div className="text-4xl mb-4">🎨</div>
-                  <h3 className="text-xl font-bold mb-3">Custom Solutions</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Custom Solutions</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     No templates, no shortcuts. Every project is built from scratch to match your brand, goals, and unique requirements.
                   </p>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.5}>
-                <div className="p-8 border-2 border-gray-200 rounded-xl hover:border-brand-purple transition-colors">
+                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
                   <div className="text-4xl mb-4">💰</div>
-                  <h3 className="text-xl font-bold mb-3">Transparent Pricing</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Transparent Pricing</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     Straightforward hourly rate with no hidden fees. You'll know exactly what you're paying for before we start.
                   </p>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.6}>
-                <div className="p-8 border-2 border-gray-200 rounded-xl hover:border-brand-purple transition-colors">
+                <div className="p-8 border border-white/10 rounded-xl hover:border-brand-purple hover:bg-white/5 transition-all">
                   <div className="text-4xl mb-4">🤝</div>
-                  <h3 className="text-xl font-bold mb-3">Long-term Partnership</h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <h3 className="text-xl font-bold mb-3 text-gray-100">Long-term Partnership</h3>
+                  <p className="text-gray-300 leading-relaxed">
                     I'm here for ongoing support and updates, not just the initial launch. Your success is my success.
                   </p>
                 </div>
@@ -209,12 +209,12 @@ export default function AboutPage() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Technologies I Use</h2>
-              <p className="text-xl text-gray-600 text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">Technologies I Use</h2>
+              <p className="text-xl text-gray-300 text-center mb-12">
                 Modern, proven tools for building fast, reliable websites
               </p>
             </ScrollAnimation>
@@ -228,7 +228,7 @@ export default function AboutPage() {
                       {techs.map((tech) => (
                         <span 
                           key={tech}
-                          className="px-4 py-2 bg-white text-gray-700 rounded-lg shadow-sm hover:shadow-md hover:scale-105 transition-all font-medium"
+                          className="px-4 py-2 bg-white/5 text-gray-200 rounded-lg border border-white/10 hover:bg-white/10 hover:border-brand-purple transition-all font-medium"
                         >
                           {tech}
                         </span>
@@ -240,8 +240,8 @@ export default function AboutPage() {
             </div>
 
             <ScrollAnimation delay={0.5}>
-              <div className="mt-12 p-8 bg-white rounded-xl shadow-lg">
-                <p className="text-center text-gray-600 leading-relaxed">
+              <div className="mt-12 p-8 bg-white/5 rounded-xl border border-white/10">
+                <p className="text-center text-gray-300 leading-relaxed">
                   <strong className="text-brand-purple">Specialties:</strong> Tailwind CSS for rapid, responsive design • GSAP for buttery-smooth animations • Next.js for performance • Shopify API integration for e-commerce
                 </p>
               </div>
@@ -251,14 +251,14 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
                 Let's Work Together
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Ready to elevate your online presence? Let's discuss your project and create something exceptional.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
