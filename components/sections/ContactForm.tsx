@@ -51,15 +51,15 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">
+          <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">
             Name *
           </label>
           <input
             {...register('name')}
             type="text"
             id="name"
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
-              errors.name ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-3 bg-gray-900 text-gray-100 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
+              errors.name ? 'border-red-500' : 'border-gray-700'
             }`}
             placeholder="Your full name"
           />
@@ -70,15 +70,15 @@ export default function ContactForm() {
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-300">
             Email *
           </label>
           <input
             {...register('email')}
             type="email"
             id="email"
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
-              errors.email ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-3 bg-gray-900 text-gray-100 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
+              errors.email ? 'border-red-500' : 'border-gray-700'
             }`}
             placeholder="your.email@example.com"
           />
@@ -89,28 +89,28 @@ export default function ContactForm() {
 
         {/* Phone */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium mb-2">
+          <label htmlFor="phone" className="block text-sm font-medium mb-2 text-gray-300">
             Phone (Optional)
           </label>
           <input
             {...register('phone')}
             type="tel"
             id="phone"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-gray-900 text-gray-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
             placeholder="(123) 456-7890"
           />
         </div>
 
         {/* Service */}
         <div>
-          <label htmlFor="service" className="block text-sm font-medium mb-2">
+          <label htmlFor="service" className="block text-sm font-medium mb-2 text-gray-300">
             Service Interested In *
           </label>
           <select
             {...register('service')}
             id="service"
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
-              errors.service ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-3 bg-gray-900 text-gray-100 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
+              errors.service ? 'border-red-500' : 'border-gray-700'
             }`}
           >
             <option value="">Select a service</option>
@@ -129,13 +129,13 @@ export default function ContactForm() {
 
         {/* Budget */}
         <div>
-          <label htmlFor="budget" className="block text-sm font-medium mb-2">
+          <label htmlFor="budget" className="block text-sm font-medium mb-2 text-gray-300">
             Estimated Budget (Optional)
           </label>
           <select
             {...register('budget')}
             id="budget"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-gray-900 text-gray-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
           >
             <option value="">Select a budget range</option>
             <option value="$1,000 - $2,500">$1,000 - $2,500</option>
@@ -148,13 +148,13 @@ export default function ContactForm() {
 
         {/* Timeline */}
         <div>
-          <label htmlFor="timeline" className="block text-sm font-medium mb-2">
+          <label htmlFor="timeline" className="block text-sm font-medium mb-2 text-gray-300">
             Project Timeline (Optional)
           </label>
           <select
             {...register('timeline')}
             id="timeline"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
+            className="w-full px-4 py-3 bg-gray-900 text-gray-100 border border-gray-700 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all"
           >
             <option value="">Select a timeline</option>
             <option value="ASAP">ASAP</option>
@@ -167,15 +167,15 @@ export default function ContactForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium mb-2">
+          <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-300">
             Project Description *
           </label>
           <textarea
             {...register('message')}
             id="message"
             rows={6}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
-              errors.message ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-4 py-3 bg-gray-900 text-gray-100 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all ${
+              errors.message ? 'border-red-500' : 'border-gray-700'
             }`}
             placeholder="Tell us about your project..."
           />
@@ -246,20 +246,20 @@ export default function ContactForm() {
       </AnimatePresence>
 
       {/* Alternative Contact Info */}
-      <div className="mt-12 pt-12 border-t border-gray-200">
-        <h3 className="text-2xl font-bold mb-4">Other Ways to Reach Me</h3>
-        <div className="space-y-3 text-gray-700">
+      <div className="mt-12 pt-12 border-t border-gray-700">
+        <h3 className="text-2xl font-bold mb-4 text-gray-100">Other Ways to Reach Me</h3>
+        <div className="space-y-3 text-gray-300">
           <p>
-            <strong className="text-white">Email:</strong>{' '}
+            <strong className="text-gray-100">Email:</strong>{' '}
             <a href="mailto:yaser@creadevdesign.com" className="text-brand-purple hover:underline">
               yaser@creadevdesign.com
             </a>
           </p>
           <p>
-            <strong className="text-white">Location:</strong> Fairfax, Virginia
+            <strong className="text-gray-100">Location:</strong> Fairfax, Virginia
           </p>
           <p>
-            <strong className="text-white">Response Time:</strong> Within 24 hours
+            <strong className="text-gray-100">Response Time:</strong> Within 24 hours
           </p>
         </div>
       </div>

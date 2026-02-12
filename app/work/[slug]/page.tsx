@@ -46,7 +46,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="min-h-screen text-foreground">
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation>
@@ -61,8 +61,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 Back to All Projects
               </Link>
 
-              <h1 className="text-5xl md:text-6xl font-bold mb-4">{project.title}</h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-6">{project.description}</p>
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">{project.title}</h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-6">{project.description}</p>
               
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-8">
@@ -96,14 +96,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {/* Project Image */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <ScrollAnimation delay={0.2}>
             <div className="max-w-6xl mx-auto">
               <div className="aspect-video bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink rounded-2xl flex items-center justify-center shadow-2xl">
                 <span className="text-8xl">🚀</span>
               </div>
-              <p className="text-center text-sm text-gray-500 mt-4">
+              <p className="text-center text-sm text-gray-400 mt-4">
                 Project screenshot coming soon - Visit the live site to see it in action
               </p>
             </div>
@@ -112,38 +112,38 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {/* Overview Stats */}
-      {project.caseStudy.deliverables && (
-        <section className="py-16 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      {project.deliverables && (
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ScrollAnimation delay={0.1}>
-                  <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                  <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
                     <div className="text-4xl mb-2">🎯</div>
                     <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                       {project.category}
                     </div>
-                    <div className="text-gray-600">Project Type</div>
+                    <div className="text-gray-300">Project Type</div>
                   </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation delay={0.2}>
-                  <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                  <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
                     <div className="text-4xl mb-2">⚡</div>
                     <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
                       {project.tags.length}
                     </div>
-                    <div className="text-gray-600">Technologies Used</div>
+                    <div className="text-gray-300">Technologies Used</div>
                   </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation delay={0.3}>
-                  <div className="text-center p-8 bg-white rounded-xl shadow-lg">
+                  <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
                     <div className="text-4xl mb-2">📦</div>
                     <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                      {project.caseStudy.deliverables.length}
+                      {project.deliverables.length}
                     </div>
-                    <div className="text-gray-600">Deliverables</div>
+                    <div className="text-gray-300">Deliverables</div>
                   </div>
                 </ScrollAnimation>
               </div>
@@ -153,37 +153,37 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       )}
 
       {/* Case Study Details */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-4xl font-bold mb-12 text-center">Case Study</h2>
+              <h2 className="text-4xl font-bold mb-12 text-center text-gray-100">Case Study</h2>
             </ScrollAnimation>
             
             <div className="space-y-12">
               {/* The Challenge */}
               <ScrollAnimation delay={0.1}>
-                <div className="p-8 border-l-4 border-brand-pink bg-pink-50 rounded-r-xl">
+                <div className="p-8 border-l-4 border-brand-pink bg-gray-900 rounded-r-xl">
                   <h3 className="text-2xl font-bold mb-4 text-brand-pink flex items-center">
                     <span className="text-3xl mr-3">💡</span>
                     The Challenge
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">{project.caseStudy.problem}</p>
+                  <p className="text-lg text-gray-300 leading-relaxed">{project.problem}</p>
                 </div>
               </ScrollAnimation>
 
               {/* Key Challenges */}
-              {project.caseStudy.challenges && (
+              {project.challenges && (
                 <ScrollAnimation delay={0.2}>
-                  <div className="p-8 bg-gray-50 rounded-xl">
-                    <h4 className="text-xl font-bold mb-4">Key Challenges</h4>
+                  <div className="p-8 bg-gray-900 rounded-xl border border-white/10">
+                    <h4 className="text-xl font-bold mb-4 text-gray-100">Key Challenges</h4>
                     <ul className="space-y-3">
-                      {project.caseStudy.challenges.map((challenge, index) => (
+                      {project.challenges.map((challenge, index) => (
                         <li key={index} className="flex items-start">
                           <svg className="w-6 h-6 text-brand-purple mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700">{challenge}</span>
+                          <span className="text-gray-300">{challenge}</span>
                         </li>
                       ))}
                     </ul>
@@ -193,27 +193,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
               {/* The Solution */}
               <ScrollAnimation delay={0.3}>
-                <div className="p-8 border-l-4 border-brand-purple bg-purple-50 rounded-r-xl">
+                <div className="p-8 border-l-4 border-brand-purple bg-gray-900 rounded-r-xl">
                   <h3 className="text-2xl font-bold mb-4 text-brand-purple flex items-center">
                     <span className="text-3xl mr-3">🎨</span>
                     The Solution
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">{project.caseStudy.solution}</p>
+                  <p className="text-lg text-gray-300 leading-relaxed">{project.solution}</p>
                 </div>
               </ScrollAnimation>
 
               {/* Technologies Used */}
-              {project.caseStudy.technologies && (
+              {project.technologies && (
                 <ScrollAnimation delay={0.4}>
-                  <div className="p-8 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
-                    <h4 className="text-xl font-bold mb-4">Technologies & Approach</h4>
+                  <div className="p-8 bg-gray-900 rounded-xl border border-white/10">
+                    <h4 className="text-xl font-bold mb-4 text-gray-100">Technologies & Approach</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {project.caseStudy.technologies.map((tech, index) => (
+                      {project.technologies.map((tech, index) => (
                         <div key={index} className="flex items-start">
                           <svg className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700 text-sm">{tech}</span>
+                          <span className="text-gray-300 text-sm">{tech}</span>
                         </div>
                       ))}
                     </div>
@@ -223,27 +223,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
               {/* The Result */}
               <ScrollAnimation delay={0.5}>
-                <div className="p-8 bg-gradient-to-br from-green-50 to-emerald-50 border-l-4 border-green-500 rounded-r-xl">
-                  <h3 className="text-2xl font-bold mb-4 text-green-700 flex items-center">
+                <div className="p-8 bg-gray-900 border-l-4 border-green-500 rounded-r-xl">
+                  <h3 className="text-2xl font-bold mb-4 text-green-400 flex items-center">
                     <span className="text-3xl mr-3">🚀</span>
                     The Result
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">{project.caseStudy.result}</p>
+                  <p className="text-lg text-gray-300 leading-relaxed">{project.results}</p>
                 </div>
               </ScrollAnimation>
 
               {/* Deliverables */}
-              {project.caseStudy.deliverables && (
+              {project.deliverables && (
                 <ScrollAnimation delay={0.6}>
-                  <div className="p-8 bg-white border-2 border-gray-200 rounded-xl">
-                    <h4 className="text-xl font-bold mb-6">Project Deliverables</h4>
+                  <div className="p-8 bg-gray-900 border border-white/10 rounded-xl">
+                    <h4 className="text-xl font-bold mb-6 text-gray-100">Project Deliverables</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {project.caseStudy.deliverables.map((deliverable, index) => (
-                        <div key={index} className="flex items-start p-4 bg-gray-50 rounded-lg hover:bg-purple-50 transition-colors">
+                      {project.deliverables.map((deliverable, index) => (
+                        <div key={index} className="flex items-start p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors">
                           <svg className="w-5 h-5 text-brand-purple mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          <span className="text-gray-700">{deliverable}</span>
+                          <span className="text-gray-300">{deliverable}</span>
                         </div>
                       ))}
                     </div>
@@ -252,20 +252,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               )}
 
               {/* Testimonial */}
-              {project.caseStudy.testimonial && (
+              {project.testimonial && (
                 <ScrollAnimation delay={0.7}>
                   <div className="p-8 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-xl shadow-xl">
                     <div className="text-6xl mb-4 opacity-50">"</div>
                     <blockquote className="text-xl italic mb-6 leading-relaxed">
-                      {project.caseStudy.testimonial.quote}
+                      {project.testimonial.text}
                     </blockquote>
                     <div className="flex items-center">
                       <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl mr-4">
                         👤
                       </div>
                       <div>
-                        <div className="font-bold">{project.caseStudy.testimonial.author}</div>
-                        <div className="text-white/80 text-sm">{project.caseStudy.testimonial.role}</div>
+                        <div className="font-bold">{project.testimonial.author}</div>
+                        <div className="text-white/80 text-sm">{project.testimonial.position}</div>
                       </div>
                     </div>
                   </div>
@@ -277,14 +277,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-purple-50 via-white to-pink-50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollAnimation>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
                 Ready for Similar Results?
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how we can create a custom solution for your business
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

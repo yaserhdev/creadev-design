@@ -114,9 +114,9 @@ export const projects: Project[] = [
       'SEO optimization and sitemap'
     ],
     testimonial: {
-      text: '[Client testimonial to be added]',
+      text: 'We were looking for someone who could launch a website for us; someone with a level expertise that matched ours. Yaser did an excellent job of crafting a site that was not only unique to our style but also simple to use for our visitors. Not only that, he manages the website in a manner that allows us to focus on our business and not spend time maintaining the site. If he doesn’t know how to do something, he’ll figure it out. Great people skills and just a great web developer to be working with.',
       author: 'De La Villa Productions',
-      position: 'Co-Founders'
+      position: 'Muhammad & Naeem, Owners'
     }
   },
   {

@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 pb-1 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
                 About CreaDev Design
               </h1>
               <p className="text-xl md:text-2xl text-gray-300">
