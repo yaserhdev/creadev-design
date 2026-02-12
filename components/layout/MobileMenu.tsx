@@ -49,35 +49,35 @@ export default function MobileMenu() {
         aria-label="Toggle menu"
         aria-expanded={isOpen}
       >
-        <div className="w-6 h-5 flex flex-col justify-between">
+        <div className="w-6 h-6 flex items-center justify-center relative">
           {/* Top Line */}
           <motion.span
             animate={{
               rotate: isOpen ? 45 : 0,
-              y: isOpen ? 10 : 0,
+              y: isOpen ? 0 : -8,
             }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full h-0.5 bg-gray-700 origin-center"
+            className="w-full h-0.5 bg-gray-300 absolute"
           />
           
           {/* Middle Line */}
           <motion.span
             animate={{
               opacity: isOpen ? 0 : 1,
-              x: isOpen ? -10 : 0,
+              scale: isOpen ? 0 : 1,
             }}
             transition={{ duration: 0.2 }}
-            className="w-full h-0.5 bg-gray-700"
+            className="w-full h-0.5 bg-gray-300 absolute"
           />
           
           {/* Bottom Line */}
           <motion.span
             animate={{
               rotate: isOpen ? -45 : 0,
-              y: isOpen ? -10 : 0,
+              y: isOpen ? 0 : 8,
             }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="w-full h-0.5 bg-gray-700 origin-center"
+            className="w-full h-0.5 bg-gray-300 absolute"
           />
         </div>
       </button>
@@ -106,7 +106,7 @@ export default function MobileMenu() {
                 damping: 30, 
                 stiffness: 300 
               }}
-              className="fixed top-0 right-0 bottom-0 w-[280px] bg-white shadow-2xl z-40 md:hidden"
+              className="fixed top-0 right-0 bottom-0 w-[280px] bg-black shadow-2xl z-40 md:hidden"
             >
               {/* Menu Content */}
               <div className="flex flex-col h-full pt-20 pb-8 px-6">
