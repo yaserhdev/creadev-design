@@ -168,5 +168,52 @@ export const projects: Project[] = [
       author: 'Mr. Xtractor Auto Detailing',
       position: 'Owner'
     }
-  }
+  },
+  {
+  id: 4,
+  slug: 'creadev-design',
+  title: 'CreaDev Design Portfolio',
+  category: 'Business',
+  description: 'Modern portfolio website showcasing web development services with Next.js, Tailwind CSS, and premium animations',
+  tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'GSAP'],
+  image: '/images/projects/creadev_design.png',
+  link: 'https://creadevdesign.com',
+  problem: 'CreaDev Design needed a professional portfolio website that would showcase web development expertise while demonstrating technical capabilities through the site itself. The challenge was creating a site that balanced visual appeal with performance, featured smooth animations without sacrificing load times, and effectively communicated services to potential clients. The site needed to serve as both a portfolio piece and a functional business tool, converting visitors into leads while standing out in a competitive market.',
+  solution: 'We built a modern, performance-optimized portfolio using Next.js 16 with TypeScript for type safety and developer experience. The site features a custom 3D logo animation on the homepage using pure CSS transforms and clip-path masking, Framer Motion for scroll-triggered animations throughout, and a fully responsive design with Tailwind CSS 4. We implemented a dark theme with a subtle grid background pattern, created detailed case study pages for each project with comprehensive problem-solution-result breakdowns, and integrated Vercel Analytics for performance tracking. The architecture uses Next.js App Router with server-side rendering for optimal SEO.',
+  results: 'The portfolio successfully positions CreaDev Design as a premium web development service with technical depth. The 3D logo animation creates an immediate impression of sophistication, while the smooth scroll animations keep visitors engaged as they explore services and projects. The detailed case studies demonstrate problem-solving ability and technical expertise, building trust with potential clients. The site achieves Lighthouse scores of 95+ across all metrics, with sub-2-second load times. The responsive design ensures a flawless experience across all devices. The clear service descriptions and project showcases have streamlined the client onboarding process.',
+  challenges: [
+    'Creating complex CSS animations (3D logo morph) that perform smoothly at 60fps across all devices',
+    'Implementing Tailwind CSS 4 (beta) with Next.js 16 before official stable releases',
+    'Designing a dark theme with sufficient contrast for accessibility while maintaining visual appeal',
+    'Building a scalable project data structure that supports detailed case studies',
+    'Optimizing Next.js Image components for fast loading while maintaining quality',
+    'Integrating Framer Motion animations without impacting Core Web Vitals scores'
+  ],
+  technologies: [
+    'Next.js 16.1.1 - React framework with App Router and server components',
+    'React 19 - Latest React with concurrent features',
+    'TypeScript 5 - Type-safe development with strict mode',
+    'Tailwind CSS 4 - Utility-first CSS with JIT compiler',
+    'Framer Motion 12 - Production-ready animation library',
+    'React Hook Form - Performant form validation',
+    'Zod - TypeScript-first schema validation',
+    'Vercel Analytics - Real-time performance monitoring',
+    'Resend - Email API for contact form',
+    'Next.js Metadata API - SEO optimization with Open Graph'
+  ],
+  deliverables: [
+    'Fully responsive Next.js portfolio website',
+    'Custom 3D logo animation with clip-path masking',
+    'Four detailed project case study pages',
+    'Interactive contact form with validation',
+    'About page with founder story and tech stack',
+    'Services page with six service offerings',
+    'SEO optimization with sitemap and robots.txt',
+    'Structured data (schema.org) for local business',
+    'Dark theme with custom grid background',
+    'Mobile-optimized navigation with animated menu',
+    'Performance optimization (95+ Lighthouse scores)',
+    'Vercel deployment with automatic CI/CD'
+  ]
+}
 ];
