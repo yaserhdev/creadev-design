@@ -19,6 +19,7 @@ const projectImages: Record<string, string> = {
   'noosh-grill': '/images/projects/noosh_grill.png',
   'delavilla-productions': '/images/projects/de_la_villa.png',
   'mr-xtractor': '/images/projects/mr_xtractor.png',
+  'creadev-design': '/images/projects/creadev_design.png',
 };
 
 // Get unique technologies across all projects
