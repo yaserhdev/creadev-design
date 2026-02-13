@@ -118,8 +118,8 @@ export const projects: Project[] = [
     ],
     testimonial: {
       text: 'We were looking for someone who could launch a website for us; someone with a level expertise that matched ours. Yaser did an excellent job of crafting a site that was not only unique to our style but also simple to use for our visitors. Not only that, he manages the website in a manner that allows us to focus on our business and not spend time maintaining the site. If he doesn’t know how to do something, he’ll figure it out. Great people skills and just a great web developer to be working with.',
-      author: 'De La Villa Productions',
-      position: 'Muhammad & Naeem, Owners'
+      author: 'Muhammad & Naeem D.',
+      position: 'De La Villa Productions, Owners'
     }
   },
   {
@@ -168,9 +168,9 @@ export const projects: Project[] = [
       'Performance optimization for fast load times'
     ],
     testimonial: {
-      text: '[Client testimonial to be added]',
-      author: 'Mr. Xtractor Auto Detailing',
-      position: 'Owner'
+      text: 'I hired Yaser to build the website for my detailing business, Mr. Xtractor Auto Detailing, and I couldn’t be happier with the results. He took the time to understand my services, branding, and goals. The website is professional, easy to navigate, and helps my business stand out in the Alexandria area. He was responsive, made revisions quickly, and guided me through the process step by step. If you’re a small business or want to revamp your website and are looking for someone reliable and skilled to build your website, Yaser is the guy to go to.',
+      author: 'Nery H.',
+      position: 'Mr. Xtractor Auto Detailing, Owner'
     }
   },
   {

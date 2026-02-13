@@ -51,7 +51,7 @@ export default function Hero() {
           {/* Scroll Indicator */}
           <div className="mt-16 animate-bounce">
             <svg 
-              className="w-6 h-6 mx-auto text-brand-purple" 
+              className="w-12 h-12 mx-auto text-brand-purple" 
               fill="none" 
               strokeLinecap="round" 
               strokeLinejoin="round" 

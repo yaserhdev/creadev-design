@@ -3,6 +3,14 @@ import { projects } from '@/lib/data/projects';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import Image from 'next/image';
+
+const projectImages: Record<string, string> = {
+  'noosh-grill': '/images/projects/noosh_grill.png',
+  'delavilla-productions': '/images/projects/de_la_villa.png',
+  'mr-xtractor': '/images/projects/mr_xtractor.png',
+  'creadev-design': '/images/projects/creadev_design.png',
+};
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -100,12 +108,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="container mx-auto px-4">
           <ScrollAnimation delay={0.2}>
             <div className="max-w-6xl mx-auto">
-              <div className="aspect-video bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink rounded-2xl flex items-center justify-center shadow-2xl">
-                <span className="text-8xl">🚀</span>
-              </div>
-              <p className="text-center text-sm text-gray-400 mt-4">
-                Project screenshot coming soon - Visit the live site to see it in action
-              </p>
+              {projectImages[project.slug] ? (
+                <div className="aspect-video relative rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src={projectImages[project.slug]}
+                    alt={`${project.title} Screenshot`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1536px) 100vw, 1536px"
+                    priority
+                  />
+                </div>
+              ) : (
+                <div className="aspect-video bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink rounded-2xl flex items-center justify-center shadow-2xl">
+                  <span className="text-8xl">🚀</span>
+                </div>
+              )}
             </div>
           </ScrollAnimation>
         </div>
