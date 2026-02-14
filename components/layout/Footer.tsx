@@ -15,8 +15,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-600 mb-4">
-              Professional web development services in Fairfax, Virginia. 
-              Custom websites, e-commerce solutions, and modern web applications.
+              Custom-built websites for businesses that refuse to blend in.
             </p>
             <p className="text-sm text-gray-500">
               Based in Fairfax, VA
@@ -44,7 +43,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/work" className="text-gray-600 hover:text-brand-purple transition-colors">
-                  Work
+                  Projects
                 </Link>
               </li>
               <li>
@@ -61,8 +60,10 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-600">
               <li>Custom Website Development</li>
               <li>E-commerce Solutions</li>
-              <li>Responsive Design</li>
+              <li>Website Redesigns</li>
               <li>Website Maintenance</li>
+              <li>Performance Optimization</li>
+              <li>SEO Implementation</li>
             </ul>
           </div>
         </div>

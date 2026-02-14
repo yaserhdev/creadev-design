@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 
 // Technologies organized by category
 const technologies = {
-  'Frontend': ['React', 'Next.js', 'Tailwind CSS', 'SCSS', 'HTML5', 'JavaScript', 'TypeScript'],
+  'Frontend': ['React', 'Next.js', 'Tailwind CSS', 'Bulma CSS', 'SCSS', 'CSS3', 'HTML5', 'JavaScript', 'TypeScript'],
   'Animation': ['GSAP', 'Framer Motion', 'CSS Animations', '3D Transforms'],
-  'Backend': ['Node.js', 'API Integration', 'Shopify API', 'GraphQL'],
-  'Tools': ['Git', 'GitHub', 'Vercel', 'Figma', 'VS Code'],
+  'Backend': ['API Integration', 'Shopify API', 'GraphQL'],
+  'Tools': ['Git', 'GitHub', 'Vercel', 'Netlify', 'Figma', 'VS Code'],
 };
 
 export default function AboutPage() {
@@ -213,10 +213,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">Technologies I Use</h2>
-              <p className="text-xl text-gray-300 text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">Technologies</h2>
+              {/* <p className="text-xl text-gray-300 text-center mb-12">
                 Modern, proven tools for building fast, reliable websites
-              </p>
+              </p> */}
             </ScrollAnimation>
 
             <div className="space-y-8">
@@ -242,7 +242,11 @@ export default function AboutPage() {
             <ScrollAnimation delay={0.5}>
               <div className="mt-12 p-8 bg-gray-900 rounded-xl border border-white/10">
                 <p className="text-center text-gray-300 leading-relaxed">
-                  <strong className="text-brand-purple">Specialties:</strong> Tailwind CSS for rapid, responsive design • GSAP for buttery-smooth animations • Next.js for performance • Shopify API integration for e-commerce
+                  <strong className="text-brand-purple">Specialties:</strong> Tailwind CSS for clean, maintainable styling • GSAP & CSS 3D for premium animations • Next.js for performance and SEO • Headless e-commerce integration
+                </p>
+                <br></br>
+                <p className="text-center text-gray-300 leading-relaxed">
+                  <strong className="text-brand-purple">Every project is hand-coded - no Wordpress, no page builders, no templates.</strong>
                 </p>
               </div>
             </ScrollAnimation>
@@ -256,23 +260,23 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
-                Let's Work Together
+                Got A Project In Mind?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Ready to elevate your online presence? Let's discuss your project and create something exceptional.
+                Every project starts with a conversation — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
                 >
-                  Get in Touch
+                  Let's Talk
                 </Link>
                 <Link 
                   href="/work"
                   className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all"
                 >
-                  View My Work
+                  View Our Projects
                 </Link>
               </div>
             </ScrollAnimation>

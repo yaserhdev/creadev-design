@@ -12,7 +12,7 @@ export default function Services() {
               Services
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive web development solutions tailored to your business needs
+              Everything you need to launch, grow, and maintain your online presence
             </p>
           </ScrollAnimation>
         </div>

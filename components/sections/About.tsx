@@ -4,15 +4,15 @@ import Image from 'next/image';
 export default function About() {
   const stats = [
     { number: '3+', label: 'Years Experience' },
-    { number: '10+', label: 'Projects Completed' },
-    { number: '100%', label: 'Client Satisfaction' },
+    { number: '0', label: 'Templates Used' },
     { number: '24hr', label: 'Response Time' },
+    { number: '5⋆', label: 'Client Rated' },
   ];
 
   const whyChooseUs = [
     {
-      title: 'Freelance Flexibility with Agency-Level Quality',
-      description: 'Get the personal attention and direct communication of working with a freelancer, combined with the professional standards and reliability you\'d expect from an established agency.'
+      title: 'Freelance Flexibility, Agency-Level Quality',
+      description: "Get the personal attention and direct communication of working with a freelancer, combined with the professional standards and reliability you'd expect from an established agency."
     },
     {
       title: 'Based Locally in Fairfax, Virginia',
@@ -20,11 +20,11 @@ export default function About() {
     },
     {
       title: 'Modern Technologies, Timeless Design',
-      description: 'I build with the latest web technologies (React, Next.js, TypeScript) to ensure your site is fast, secure, and future-proof — while maintaining a clean, professional design that won\'t look dated in 5 years.'
+      description: "We build with modern, proven technologies — ensuring your site is fast, secure, and won't look dated in 5 years. The tech choices match your project — whether that's a streamlined single-page site or a full-scale web application."
     },
     {
       title: 'Transparent Pricing, No Surprises',
-      description: 'Clear project scopes, detailed quotes, and regular communication mean you always know what you\'re paying for. No hidden fees, no scope creep, no surprises.'
+      description: 'Clear project scopes, detailed estimates, and regular communication mean you always know what you\'re paying for. No hidden fees, no scope creep, no surprises.'
     }
   ];
 
@@ -58,24 +58,18 @@ export default function About() {
             {/* Right Column - Content */}
             <div>
               <ScrollAnimation delay={0.2}>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-center text-4xl md:text-5xl font-bold mb-6">
                   About CreaDev Design
                 </h2>
                 <div className="space-y-4 text-lg text-gray-700">
                   <p>
-                    Hi, I'm <span className="font-semibold text-brand-purple">Yaser</span>, 
-                    the developer behind CreaDev Design. For over 2 years, I've been helping 
-                    small businesses and entrepreneurs in Virginia establish their online 
-                    presence with custom websites that actually work.
+                    <span className="font-semibold text-brand-purple">Yaser</span> established CreaDev Design in 2025 after years of hands-on experience. Based in Fairfax, Virginia, CreaDev Design has launched several websites to date — from restaurants and video production companies to service businesses across Northern Virginia.
                   </p>
                   <p>
-                    <strong>No cookie-cutter templates, no bloated code</strong> — just clean, 
-                    fast, professional websites built specifically for your needs.
+                    Every site is built from scratch. <strong>No templates. No shortcuts.</strong> Just clean code and designs that actually serve the business.
                   </p>
                   <p>
-                    I combine technical expertise with creative problem-solving to deliver 
-                    websites that not only look great but drive real business results. Every 
-                    project is a partnership, and your success is my success.
+                    With a focus on modern technologies and timeless design, every project is treated as a partnership — because your success is the whole point.
                   </p>
                 </div>
               </ScrollAnimation>

@@ -36,7 +36,7 @@ export default function Header() {
               href="/work" 
               className="text-gray-700 hover:text-brand-purple transition-colors"
             >
-              Work
+              Projects
             </Link>
             <Link 
               href="/contact" 

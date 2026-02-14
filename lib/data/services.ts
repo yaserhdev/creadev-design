@@ -10,11 +10,11 @@ export const services: Service[] = [
   {
     id: 'custom-websites',
     title: 'Custom Website Development',
-    description: 'Tailored websites built from scratch to match your brand and business goals perfectly. No templates — just clean code and thoughtful design.',
+    description: 'Your website, built from scratch. No templates, no compromises — just clean code designed around your brand and goals.',
     icon: '💻',
     features: [
       'Fully responsive design',
-      'Modern tech stack (React, Next.js)',
+      'Modern tech stacks',
       'SEO optimized from day one',
       'Lightning-fast loading speeds',
       'Mobile-first approach',
@@ -24,35 +24,35 @@ export const services: Service[] = [
   {
     id: 'ecommerce',
     title: 'E-commerce Solutions',
-    description: 'Full-featured online stores with Shopify integration and custom functionality. Start selling online with a professional setup that scales with your business.',
+    description: 'Ready to sell online? We build custom storefronts tailored to how your business actually operates — from standalone shops to full POS integration.',
     icon: '🛒',
     features: [
-      'Seamless Shopify integration',
+      'Custom or platform-based (Shopify, WooCommerce, etc.)',
       'Secure payment processing',
-      'Inventory management',
-      'Sales analytics dashboard',
-      'Mobile shopping optimization',
-      'Easy product management'
+      'Inventory & order management',
+      'In-store POS integration available',
+      'Mobile optimized checkout',
+      'Built to scale with your business'
     ]
   },
   {
-    id: 'responsive-design',
-    title: 'Responsive Design',
-    description: 'Beautiful websites that work flawlessly on all devices, from mobile phones to desktop monitors. Your customers can access your site anywhere, anytime.',
-    icon: '📱',
+    id: 'website-redesigns',
+    title: 'Website Redesigns',
+    description: "Already have a site that's not cutting it? We'll rebuild it from the ground up — faster, sharper, and designed to actually convert.",
+    icon: '✨',
     features: [
-      'Mobile-first approach',
-      'Cross-browser compatible',
-      'Touch-friendly interfaces',
-      'Retina display ready',
-      'Tablet optimized',
-      'Performance tested on real devices'
+      'Modern design refresh',
+      'Improved site structure',
+      'Content migration included',
+      'SEO preserved during transition',
+      'Performance upgrades built-in',
+      'Same URL, new everything'
     ]
   },
   {
     id: 'maintenance',
     title: 'Website Maintenance',
-    description: 'Ongoing support and updates to keep your website secure, fast, and up-to-date. Focus on your business while we handle the technical details.',
+    description: 'Launch it and forget it? Not quite. We keep your site secure, updated, and running smoothly so you can focus on your business.',
     icon: '🔧',
     features: [
       'Regular security updates',
@@ -66,7 +66,7 @@ export const services: Service[] = [
   {
     id: 'performance',
     title: 'Performance Optimization',
-    description: 'Speed up your existing website for better user experience and higher search rankings. A fast website keeps visitors engaged and converts better.',
+    description: "Slow sites lose customers. We'll tune up your existing website for faster load times, better rankings, and happier visitors.",
     icon: '⚡',
     features: [
       'Load time optimization',
@@ -80,7 +80,7 @@ export const services: Service[] = [
   {
     id: 'seo',
     title: 'SEO Implementation',
-    description: 'Technical SEO setup to help customers find you on Google and other search engines. Get found by the people searching for your services.',
+    description: 'Get found on Google. Technical SEO setup that helps the right customers discover your business — including local Virginia searches.',
     icon: '🔍',
     features: [
       'On-page SEO optimization',

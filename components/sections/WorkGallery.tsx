@@ -28,10 +28,10 @@ export default function WorkGallery() {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <ScrollAnimation>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our Work
+              Our Projects
             </h2>
             <p className="text-xl text-gray-600">
-              Recent projects and case studies showcasing our expertise
+              Real sites, real results
             </p>
           </ScrollAnimation>
         </div>

@@ -16,19 +16,19 @@ export default function Hero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight px-4">
             <span className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
               <CharacterAnimation 
-                text="Professional Web Development"
+                text="We Build Websites People Actually Talk About"
               />
             </span>
           </h1>
           
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-gray-700 mb-4">
-            Custom websites that convert visitors into customers — built with modern technology and designed to grow with your business
+            Not another forgettable template. Real design, real code, real results — crafted for businesses ready to stand out.
           </p>
           
           {/* Description */}
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Transform your online presence with a website that works as hard as you do. Based in Fairfax, Virginia, we specialize in creating fast, beautiful, and effective websites for small businesses and entrepreneurs.
+            Premium websites without the agency price tag.
           </p>
           
           {/* CTA Buttons */}
@@ -37,14 +37,14 @@ export default function Hero() {
               href="/contact"
               className="group relative px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold overflow-hidden transition-all hover:shadow-xl hover:scale-105"
             >
-              <span className="relative z-10">Get a Free Quote</span>
+              <span className="relative z-10">Let's Talk</span>
             </Link>
             
             <Link 
               href="/work"
               className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all hover:shadow-lg"
             >
-              View Our Work
+              View Our Projects
             </Link>
           </div>
           

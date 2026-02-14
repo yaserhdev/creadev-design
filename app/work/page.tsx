@@ -5,12 +5,12 @@ import ScrollAnimation from '@/components/animations/ScrollAnimation';
 import { projects, categories } from '@/lib/data/projects';
 
 export const metadata: Metadata = {
-  title: 'Our Work - CreaDev Design Portfolio',
+  title: 'Our Projects - CreaDev Design Portfolio',
   description: 'Explore our portfolio of custom websites, e-commerce solutions, and digital experiences built for businesses across Virginia.',
   openGraph: {
-    title: 'Our Work - CreaDev Design Portfolio',
+    title: 'Our Projects - CreaDev Design Portfolio',
     description: 'Explore our portfolio of custom websites, e-commerce solutions, and digital experiences.',
-    url: 'https://creadevdesign.com/work',
+    url: 'https://creadevdesign.com/projects',
   },
 };
 
@@ -44,10 +44,10 @@ export default function WorkPage() {
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                Our Work
+                Our Projects
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Custom websites and digital experiences that drive results for businesses across Virginia
+                Handcrafted websites that help businesses stand out online
               </p>
               
               {/* Stats */}
@@ -178,7 +178,7 @@ export default function WorkPage() {
           <div className="max-w-7xl mx-auto">
             <ScrollAnimation>
               <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-100">All Projects</h2>
-              <p className="text-gray-300 text-center mb-12">Explore our complete portfolio</p>
+              <p className="text-gray-300 text-center mb-12">Explore our portfolio</p>
             </ScrollAnimation>
 
             {/* Projects Grid - 2 columns for more detail */}
@@ -272,17 +272,17 @@ export default function WorkPage() {
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
-                Let's Build Something Amazing
+                Ready To Build Something Amazing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Ready to bring your vision to life? Let's discuss your project and create a custom solution that exceeds expectations.
+                Every project starts with a conversation. Tell us about your business and we'll show you what's possible — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
                 >
-                  Start Your Project
+                  Let's Talk
                 </Link>
                 <Link 
                   href="/services"
