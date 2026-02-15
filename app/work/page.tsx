@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
-import { projects, categories } from '@/lib/data/projects';
+import { projects } from '@/lib/data/projects';
 
 export const metadata: Metadata = {
   title: 'Our Projects - CreaDev Design Portfolio',
@@ -27,6 +27,11 @@ const allTechnologies = Array.from(
   new Set(projects.flatMap(project => project.tags))
 ).sort();
 
+// Get unique categories across all projects
+const allCategories = Array.from(
+  new Set(projects.flatMap(project => project.categories))
+);
+
 export default function WorkPage() {
   // Featured project (first one or most recent)
   const featuredProject = projects[0];
@@ -34,7 +39,7 @@ export default function WorkPage() {
   // Portfolio stats
   const totalProjects = projects.length;
   const totalTechnologies = allTechnologies.length;
-  const industriesServed = Array.from(new Set(projects.map(p => p.category))).length;
+  const industriesServed = allCategories.length;
 
   return (
     <main className="min-h-screen text-foreground">
@@ -118,11 +123,16 @@ export default function WorkPage() {
                       {featuredProject.description}
                     </p>
 
-                    {/* Category Badge */}
-                    <div className="mb-6">
-                      <span className="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm font-medium border border-white/20">
-                        {featuredProject.category}
-                      </span>
+                    {/* Category Badges */}
+                    <div className="mb-6 flex flex-wrap gap-2">
+                      {featuredProject.categories.map((cat) => (
+                        <span 
+                          key={cat}
+                          className="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm font-medium border border-white/20"
+                        >
+                          {cat}
+                        </span>
+                      ))}
                     </div>
 
                     {/* Tech Stack Preview */}
@@ -216,44 +226,52 @@ export default function WorkPage() {
 
                         {/* Project Info */}
                         <div className="p-6 flex-grow flex flex-col">
-                          {/* Category Badge */}
-                          <div className="mb-3">
-                            <span className="px-3 py-1 bg-brand-purple/20 text-brand-purple text-sm rounded-full font-medium border border-brand-purple/30">
-                              {project.category}
-                            </span>
+                          {/* Category Badges */}
+                          <div className="mb-3 flex flex-wrap gap-2">
+                            {project.categories.map((cat) => (
+                              <span 
+                                key={cat}
+                                className="px-3 py-1 bg-brand-purple/20 text-brand-purple text-sm rounded-full font-medium border border-brand-purple/30"
+                              >
+                                {cat}
+                              </span>
+                            ))}
                           </div>
 
                           <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-100 group-hover:text-brand-purple transition-colors">
                             {project.title}
                           </h3>
                           
-                          <p className="text-gray-300 mb-4 flex-grow text-lg leading-relaxed">
+                          <p className="text-gray-300 mb-4 text-lg leading-relaxed">
                             {project.description}
                           </p>
 
-                          {/* Tech Stack */}
-                          <div className="mb-4">
-                            <p className="text-sm font-semibold text-gray-200 mb-2">Technologies:</p>
-                            <div className="flex flex-wrap gap-2">
-                              {project.tags.map((tag) => (
-                                <span 
-                                  key={tag}
-                                  className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
+                          {/* Bottom section - always aligned */}
+                          <div className="mt-auto">
+                            {/* Tech Stack */}
+                            <div className="mb-4">
+                              <p className="text-sm font-semibold text-gray-200 mb-2">Technologies:</p>
+                              <div className="flex flex-wrap gap-2">
+                                {project.tags.map((tag) => (
+                                  <span 
+                                    key={tag}
+                                    className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
+                                  >
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
                             </div>
-                          </div>
 
-                          {/* View Case Study Link */}
-                          <div className="mt-auto pt-4 border-t border-white/10">
-                            <span className="text-brand-purple font-semibold group-hover:text-brand-pink transition-colors inline-flex items-center">
-                              View Full Case Study
-                              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                              </svg>
-                            </span>
+                            {/* View Case Study Link */}
+                            <div className="pt-4 border-t border-white/10">
+                              <span className="text-brand-purple font-semibold group-hover:text-brand-pink transition-colors inline-flex items-center">
+                                View Full Case Study
+                                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -267,26 +285,26 @@ export default function WorkPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-gradient-to-br from-brand-pink to-brand-purple text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <ScrollAnimation>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
-                Ready To Build Something Amazing?
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Ready To Stand Out?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Every project starts with a conversation. Tell us about your business and we'll show you what's possible — no commitment, no pressure.
+              <p className="text-xl mb-8 opacity-90">
+                Tell us about your business and we'll show you what's possible — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
+                  className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
                   Let's Talk
                 </Link>
                 <Link 
                   href="/services"
-                  className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View Services
                 </Link>

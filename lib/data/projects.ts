@@ -2,7 +2,7 @@ export interface Project {
   id: number;
   slug: string;
   title: string;
-  category: string;
+  categories: string[];
   description: string;
   tags: string[];
   image?: string;
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     id: 1,
     slug: 'noosh-grill',
     title: 'Noosh Grill Restaurant',
-    category: 'Restaurant',
+    categories: ['Restaurant'],
     description: 'Custom single-page site for a Fairfax halal restaurant with an interactive 3-column menu, 3D review carousel, and real-time open/closed indicator.',
     tags: ['HTML5', 'Tailwind CSS', 'JavaScript', 'CSS 3D Transforms', 'Formspree'],
     image: '/images/projects/noosh_grill.png',
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     id: 2,
     slug: 'delavilla-productions',
     title: 'De La Villa Productions',
-    category: 'Video Production',
+    categories: ['Video Production','E-commerce'],
     description: 'Multi-page site for a DMV sports media company featuring cinematic video backgrounds, tabbed YouTube gallery, and full Shopify e-commerce integration with cart, variants, and limited-drop countdown system.',
     tags: ['HTML5', 'Bulma CSS', 'SCSS', 'JavaScript', 'Shopify Storefront API', 'Formspree'],
     image: '/images/projects/de_la_villa.png',
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     id: 3,
     slug: 'mr-xtractor',
     title: 'Mr. Xtractor Auto Detailing',
-    category: 'Business',
+    categories: ['Business'],
     description: 'Custom single-page site for a Northern VA mobile detailing business featuring dual 3D carousels, stacked before/after gallery, and OrbisX scheduling integration.',
     tags: ['HTML5', 'Bulma CSS', 'SCSS', 'JavaScript', 'GSAP 3.x', 'OrbisX'],
     image: '/images/projects/mr_xtractor.png',
@@ -168,9 +168,9 @@ export const projects: Project[] = [
     id: 4,
     slug: 'creadev-design',
     title: 'CreaDev Design Portfolio',
-    category: 'Business',
+    categories: ['Business'],
     description: 'Modern portfolio website showcasing web development services with Next.js, Tailwind CSS, and premium animations',
-    tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'GSAP'],
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'GSAP', 'Resend'],
     image: '/images/projects/creadev_design.png',
     link: 'https://creadevdesign.com',
     problem: 'CreaDev Design needed a professional portfolio website that would showcase web development expertise while demonstrating technical capabilities through the site itself. The challenge was creating a site that balanced visual appeal with performance, featured smooth animations without sacrificing load times, and effectively communicated services to potential clients. The site needed to serve as both a portfolio piece and a functional business tool, converting visitors into leads while standing out in a competitive market.',

@@ -33,7 +33,7 @@ export default function AboutPage() {
                 About CreaDev Design
               </h1>
               <p className="text-xl md:text-2xl text-gray-300">
-                Professional web development built on quality, transparency, and results
+                Custom websites - no templates, no shortcuts
               </p>
             </ScrollAnimation>
           </div>
@@ -63,19 +63,19 @@ export default function AboutPage() {
 
               <ScrollAnimation delay={0.2}>
                 <div>
-                  <h2 className="text-4xl font-bold mb-6 text-gray-100">Hi, I'm Yaser</h2>
+                  <h2 className="text-4xl font-bold mb-6 text-gray-100">Meet Yaser</h2>
                   <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
                     <p>
-                      I'm the developer behind CreaDev Design, and for over 2 years, I've been helping small businesses and entrepreneurs across Virginia establish their online presence with custom websites that actually work.
+                      <span className="font-semibold text-brand-purple">Yaser</span> is the developer behind CreaDev Design. He builds custom websites for businesses across Virginia — restaurants, service providers, media companies — anyone who wants a real site, not a template.
                     </p>
                     <p>
-                      What started as a passion for building things on the web has evolved into a full-service freelance business. I've worked with restaurants, video production companies, mobile service providers, and more—each with unique needs and goals.
+                      He got into web development through a coding bootcamp at George Washington University, but what kept him in it was the work itself: solving problems, making things look good, and helping people get online the right way. He launched CreaDev in late 2025 and has delivered several client sites since.
                     </p>
                     <p>
-                      My approach is simple: no cookie-cutter templates, no bloated code, no hidden fees. Just clean, fast, professional websites built specifically for your business, with clear communication every step of the way.
+                      His approach is simple — no page builders, no bloated code, no surprise fees. Just clean, fast websites with clear communication throughout.
                     </p>
                     <p>
-                      Based in Fairfax, Virginia, I work with clients throughout the DMV area and beyond, bringing technical expertise and creative solutions to every project.
+                      Based in Fairfax. Working with clients across the DMV and beyond.
                     </p>
                   </div>
                 </div>
@@ -97,9 +97,9 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.1}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    3+
+                    100%
                   </div>
-                  <div className="text-gray-300 font-medium">Years Experience</div>
+                  <div className="text-gray-300 font-medium">Hand-Coded</div>
                 </div>
               </ScrollAnimation>
 
@@ -115,18 +115,18 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.3}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    100%
+                    4
                   </div>
-                  <div className="text-gray-300 font-medium">Client Satisfaction</div>
+                  <div className="text-gray-300 font-medium">Industries Served</div>
                 </div>
               </ScrollAnimation>
 
               <ScrollAnimation delay={0.4}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    3
+                    15+
                   </div>
-                  <div className="text-gray-300 font-medium">Industries Served</div>
+                  <div className="text-gray-300 font-medium">Technologies</div>
                 </div>
               </ScrollAnimation>
             </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">My Approach</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">Our Approach</h2>
               <p className="text-xl text-gray-300 text-center mb-12">What makes CreaDev Design different</p>
             </ScrollAnimation>
 
@@ -149,7 +149,7 @@ export default function AboutPage() {
                   <div className="text-4xl mb-4">🎯</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Quality Over Quantity</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    I focus on delivering exceptional work for each client rather than juggling dozens of projects. Your website gets my full attention and expertise.
+                    We focus on delivering exceptional work for each client rather than juggling dozens of projects. Your website gets our full attention and expertise.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -159,7 +159,7 @@ export default function AboutPage() {
                   <div className="text-4xl mb-4">💬</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Clear Communication</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    No technical jargon unless you want it. I explain everything in plain English and keep you updated throughout the entire development process.
+                    No technical jargon unless you want it. We explain everything in plain English and keep you updated throughout the entire development process.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -169,7 +169,7 @@ export default function AboutPage() {
                   <div className="text-4xl mb-4">⚡</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Performance First</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Every website I build is optimized for speed, accessibility, and SEO from day one. Fast load times and smooth animations are standard, not extras.
+                    Every website we build is optimized for speed, accessibility, and SEO from day one. Fast load times and smooth animations are standard, not extras.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   <div className="text-4xl mb-4">🎨</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Custom Solutions</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    No templates, no shortcuts. Every project is built from scratch to match your brand, goals, and unique requirements.
+                    Every project is built from scratch — no themes, no page builders. Just clean code that's easy to maintain and scale.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -199,7 +199,7 @@ export default function AboutPage() {
                   <div className="text-4xl mb-4">🤝</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-100">Long-term Partnership</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    I'm here for ongoing support and updates, not just the initial launch. Your success is my success.
+                    We're here for ongoing support and updates, not just the initial launch. Most clients stay on for monthly maintenance.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -255,7 +255,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-gradient-to-br from-brand-pink to-brand-purple text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollAnimation>
@@ -268,13 +268,13 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
+                  className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
                   Let's Talk
                 </Link>
                 <Link 
                   href="/work"
-                  className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View Our Projects
                 </Link>

@@ -33,12 +33,12 @@ export default function ServicesPage() {
                 Our Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Comprehensive web development solutions tailored to your business needs
+                From single-page sites to full e-commerce builds
               </p>
-              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              {/* <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                 From custom websites to e-commerce platforms, we provide end-to-end 
                 web development services that help your business succeed online.
-              </p>
+              </p> */}
             </ScrollAnimation>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollAnimation>
@@ -149,7 +149,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
       <section className="py-24">
@@ -172,8 +172,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-100">Discovery & Planning</h3>
                     <p className="text-gray-300">
-                      We start by understanding your business, goals, and target audience. 
-                      Then we create a detailed project plan and timeline.
+                      We discuss your business, goals, and audience. You get a clear plan and timeline before any work begins.
                     </p>
                   </div>
                 </div>
@@ -189,8 +188,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-100">Design & Development</h3>
                     <p className="text-gray-300">
-                      Our team designs and builds your website using modern technologies 
-                      and best practices, with regular check-ins for your feedback.
+                      We design and build your site with regular check-ins so you're never in the dark.
                     </p>
                   </div>
                 </div>
@@ -206,8 +204,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-100">Testing & Refinement</h3>
                     <p className="text-gray-300">
-                      Rigorous testing across devices and browsers ensures everything works 
-                      perfectly before launch.
+                      I test across devices and browsers to make sure everything works before we go live.
                     </p>
                   </div>
                 </div>
@@ -223,8 +220,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-100">Launch & Support</h3>
                     <p className="text-gray-300">
-                      We handle the technical launch details and provide ongoing support 
-                      to keep your site running smoothly.
+                      We handle hosting, DNS, and launch. After that, I'm here for updates and maintenance if you need it.
                     </p>
                   </div>
                 </div>
@@ -240,23 +236,23 @@ export default function ServicesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <ScrollAnimation>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Start Your Project?
+                Ready To Start Your Project?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Let's discuss how we can help your business succeed online.
+                Let's talk about what you need — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
                   className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
-                  Get a Free Quote
+                  Let's Talk
                 </Link>
                 <Link 
                   href="/work"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
-                  View Our Work
+                  View Our Projects
                 </Link>
               </div>
             </ScrollAnimation>
