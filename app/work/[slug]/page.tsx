@@ -295,26 +295,26 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-gradient-to-br from-brand-pink to-brand-purple text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollAnimation>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-100">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready for Similar Results?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how we can create a custom solution for your business
+              <p className="text-xl mb-8 opacity-90">
+                Let's talk about your project — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all hover:scale-105 shadow-lg"
+                  className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
                   Start Your Project
                 </Link>
                 <Link 
                   href="/work"
-                  className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View More Projects
                 </Link>
