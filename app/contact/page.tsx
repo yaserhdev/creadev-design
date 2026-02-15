@@ -13,7 +13,7 @@ export default function ContactPage() {
                 Get In Touch
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12">
-                Ready to start your project? Let's talk.
+                Ready to start your project? Let's talk
               </p>
             </ScrollAnimation>
           </div>

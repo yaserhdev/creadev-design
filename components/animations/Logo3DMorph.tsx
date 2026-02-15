@@ -39,17 +39,15 @@ export default function Logo3DMorph() {
         .bracket-c {
           animation: slideC 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           animation-delay: 0.3s;
-          transform: translate(110px, 12.2px);
         }
 
         .bracket-d {
           animation: slideD 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           animation-delay: 0.3s;
-          transform: translate(143px, 12.2px);
         }
 
         .text-reveal-rect {
-          animation: expandFromCenter 4.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          animation: expandFromCenter 5.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
           animation-delay: 0.4s;
         }
       `}</style>
@@ -88,16 +86,16 @@ export default function Logo3DMorph() {
             </clipPath>
           </defs>
 
-          {/* Left C bracket */}
-          <g className="bracket-c">
+          {/* Left C bracket - transform attribute prevents FOUC */}
+          <g className="bracket-c" transform="translate(110, 12.2)">
             <path 
               d="M20 0 C9 0 0 9 0 20 C0 31 9 40 20 40 L27 40 L27 29 L20 29 C15 29 11 25 11 20 C11 15 15 11 20 11 L27 11 L27 0 Z" 
               fill="url(#morph-grad-1)"
             />
           </g>
 
-          {/* Right D bracket */}
-          <g className="bracket-d">
+          {/* Right D bracket - transform attribute prevents FOUC */}
+          <g className="bracket-d" transform="translate(143, 12.2)">
             <path 
               d="M7 0 C18 0 27 9 27 20 C27 31 18 40 7 40 L0 40 L0 29 L7 29 C12 29 16 25 16 20 C16 15 12 11 7 11 L0 11 L0 0 Z" 
               fill="url(#morph-grad-2)"

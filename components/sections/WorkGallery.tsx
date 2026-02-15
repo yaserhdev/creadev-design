@@ -17,9 +17,9 @@ const projectImages: Record<string, string> = {
 export default function WorkGallery() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const filteredProjects = activeCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects = activeCategory === 'All'
+    ? projects
+    : projects.filter(project => project.categories.includes(activeCategory));
 
   return (
     <section className="py-24">
@@ -101,7 +101,7 @@ export default function WorkGallery() {
                       {/* Tags - pinned to bottom */}
                       <div className="flex flex-wrap gap-2 mt-auto">
                         {project.tags.map((tag) => (
-                          <span 
+                          <span
                             key={tag}
                             className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full group-hover:bg-brand-purple group-hover:text-white transition-colors"
                           >
@@ -120,7 +120,7 @@ export default function WorkGallery() {
         {/* CTA */}
         <ScrollAnimation delay={0.6}>
           <div className="text-center mt-16">
-            <Link 
+            <Link
               href="/work"
               className="inline-block px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all hover:shadow-lg"
             >

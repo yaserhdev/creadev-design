@@ -139,7 +139,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
                     <div className="text-4xl mb-2">🎯</div>
                     <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                      {project.category}
+                      {project.categories.join(' / ')}
                     </div>
                     <div className="text-gray-300">Project Type</div>
                   </div>
