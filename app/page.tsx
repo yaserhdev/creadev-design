@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import About from '@/components/sections/About';
-import WorkGallery from '@/components/sections/WorkGallery';
+import ProjectsGallery from '@/components/sections/ProjectsGallery';
 
 export const metadata: Metadata = {
   title: 'CreaDev Design - Professional Web Development in Fairfax, VA',
@@ -31,7 +31,7 @@ export default function HomePage() {
       <Hero />
       <Services />
       <About />
-      <WorkGallery />
+      <ProjectsGallery />
     </main>
   );
 }

@@ -158,7 +158,7 @@ export default function WorkPage() {
                     {/* CTAs */}
                     <div className="flex gap-4">
                       <Link 
-                        href={`/work/${featuredProject.slug}`}
+                        href={`/projects/${featuredProject.slug}`}
                         className="px-6 py-3 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg hover:scale-105"
                       >
                         View Case Study
@@ -196,7 +196,7 @@ export default function WorkPage() {
               {[...projects].sort((a, b) => a.title.localeCompare(b.title)).map((project, index) => (
                 <ScrollAnimation key={project.id} delay={index * 0.1}>
                   <div className="h-full">
-                    <Link href={`/work/${project.slug}`}>
+                    <Link href={`/projects/${project.slug}`}>
                       <div className="group cursor-pointer h-full flex flex-col bg-gray-900 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-gray-800 transition-all duration-300">
                         {/* Project Image */}
                         <div className="relative overflow-hidden rounded-t-xl">

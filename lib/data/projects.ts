@@ -76,7 +76,7 @@ export const projects: Project[] = [
     id: 2,
     slug: 'delavilla-productions',
     title: 'De La Villa Productions',
-    categories: ['Video Production','E-commerce'],
+    categories: ['Video Production', 'E-commerce'],
     description: 'Multi-page site for a DMV sports media company featuring cinematic video backgrounds, tabbed YouTube gallery, and full Shopify e-commerce integration with cart, variants, and limited-drop countdown system.',
     tags: ['HTML5', 'Bulma CSS', 'SCSS', 'JavaScript', 'Shopify Storefront API', 'Formspree'],
     image: '/images/projects/de_la_villa.png',
@@ -113,16 +113,16 @@ export const projects: Project[] = [
       'Automatic inventory refresh system'
     ],
     testimonial: {
-      text: '[Client testimonial to be added]',
-      author: 'Muhammad Darab',
-      position: 'Co-Founder, De La Villa Productions'
+      text: 'We were looking for someone who could launch a website for us; someone with a level of expertise that matched ours. Yaser did an excellent job of crafting a site that was not only unique to our style but also simple to use for our visitors. Not only that, he manages the website in a manner that allows us to focus on our business and not spend time maintaining the site. If he doesn’t know how to do something, he’ll figure it out. Great people skills and just a great web developer to be working with.',
+      author: 'Muhammad & Naeem D.',
+      position: 'Owners, De La Villa Productions'
     }
   },
   {
     id: 3,
     slug: 'mr-xtractor',
     title: 'Mr. Xtractor Auto Detailing',
-    categories: ['Business'],
+    categories: ['Business/Service', 'Auto Detailing'],
     description: 'Custom single-page site for a Northern VA mobile detailing business featuring dual 3D carousels, stacked before/after gallery, and OrbisX scheduling integration.',
     tags: ['HTML5', 'Bulma CSS', 'SCSS', 'JavaScript', 'GSAP 3.x', 'OrbisX'],
     image: '/images/projects/mr_xtractor.png',
@@ -159,8 +159,8 @@ export const projects: Project[] = [
       'SEO implementation (schema.org, sitemap, robots.txt, meta tags)'
     ],
     testimonial: {
-      text: '[Client testimonial to be added]',
-      author: 'Nery Hernandez',
+      text: 'I hired Yaser to build the website for my detailing business, Mr. Xtractor Auto Detailing, and I couldn’t be happier with the results. He took the time to understand my services, branding, and goals. The website is professional, easy to navigate, and helps my business stand out in the Alexandria area. He was responsive, made revisions quickly, and guided me through the process step by step. If you’re a small business or want to revamp your website and are looking for someone reliable and skilled to build your website, Yaser is the guy to go to.',
+      author: 'Nery H.',
       position: 'Owner, Mr. Xtractor Auto Detailing'
     }
   },
@@ -168,47 +168,44 @@ export const projects: Project[] = [
     id: 4,
     slug: 'creadev-design',
     title: 'CreaDev Design Portfolio',
-    categories: ['Business'],
-    description: 'Modern portfolio website showcasing web development services with Next.js, Tailwind CSS, and premium animations',
-    tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'GSAP', 'Resend'],
+    categories: ['Business/Service', 'Portfolio'],
+    description: 'Modern portfolio website built with Next.js and Tailwind CSS, featuring a custom 3D logo animation, scroll-triggered reveals, and a case study system for showcasing client work.',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'Resend', 'Vercel'],
     image: '/images/projects/creadev_design.png',
     link: 'https://creadevdesign.com',
-    problem: 'CreaDev Design needed a professional portfolio website that would showcase web development expertise while demonstrating technical capabilities through the site itself. The challenge was creating a site that balanced visual appeal with performance, featured smooth animations without sacrificing load times, and effectively communicated services to potential clients. The site needed to serve as both a portfolio piece and a functional business tool, converting visitors into leads while standing out in a competitive market.',
-    solution: 'We built a modern, performance-optimized portfolio using Next.js 16 with TypeScript for type safety and developer experience. The site features a custom 3D logo animation on the homepage using pure CSS transforms and clip-path masking, Framer Motion for scroll-triggered animations throughout, and a fully responsive design with Tailwind CSS 4. We implemented a dark theme with a subtle grid background pattern, created detailed case study pages for each project with comprehensive problem-solution-result breakdowns, and integrated Vercel Analytics for performance tracking. The architecture uses Next.js App Router with server-side rendering for optimal SEO.',
-    results: 'The portfolio successfully positions CreaDev Design as a premium web development service with technical depth. The 3D logo animation creates an immediate impression of sophistication, while the smooth scroll animations keep visitors engaged as they explore services and projects. The detailed case studies demonstrate problem-solving ability and technical expertise, building trust with potential clients. The site achieves Lighthouse scores of 95+ across all metrics, with sub-2-second load times. The responsive design ensures a flawless experience across all devices. The clear service descriptions and project showcases have streamlined the client onboarding process.',
+    problem: 'We needed a portfolio that did more than list projects — it had to demonstrate the same level of craft we bring to client work. The site needed to balance visual polish with performance, showcase technical depth through detailed case studies, and convert visitors into leads. Most developer portfolios either look generic or sacrifice speed for flash. This one couldn\'t.',
+    solution: 'A custom Next.js 16 build with TypeScript, Tailwind CSS 4, and Framer Motion. The homepage features a 3D logo animation using pure CSS transforms and clip-path masking — no libraries, no performance hit. Scroll-triggered animations throughout keep the experience engaging without bloating the bundle. Each project has a dedicated case study page with problem-solution-results breakdowns, tech stack details, and deliverables. Dark theme with a subtle grid background, fully responsive, and optimized for Core Web Vitals.',
+    results: 'The site serves as both a portfolio and a proof of concept — every animation, every interaction demonstrates the same attention to detail clients can expect. Lighthouse scores: 96 Performance, 92 Accessibility, 100 Best Practices, 100 SEO. The case study format has streamlined client conversations by answering technical questions upfront. The contact form converts, and the site ranks for local web development searches.',
     challenges: [
-      'Creating complex CSS animations (3D logo morph) that perform smoothly at 60fps across all devices',
-      'Implementing Tailwind CSS 4 (beta) with Next.js 16 before official stable releases',
-      'Designing a dark theme with sufficient contrast for accessibility while maintaining visual appeal',
-      'Building a scalable project data structure that supports detailed case studies',
-      'Optimizing Next.js Image components for fast loading while maintaining quality',
-      'Integrating Framer Motion animations without impacting Core Web Vitals scores'
+      'Creating a 3D logo animation with pure CSS that runs at 60fps across all devices',
+      'Implementing Tailwind CSS 4 with Next.js 16 before stable releases',
+      'Designing a dark theme with WCAG-compliant contrast ratios',
+      'Building a scalable data structure for detailed case studies',
+      'Integrating Framer Motion animations without hurting Core Web Vitals'
     ],
     technologies: [
-      'Next.js 16.1.1 - React framework with App Router and server components',
-      'React 19 - Latest React with concurrent features',
-      'TypeScript 5 - Type-safe development with strict mode',
-      'Tailwind CSS 4 - Utility-first CSS with JIT compiler',
-      'Framer Motion 12 - Production-ready animation library',
-      'React Hook Form - Performant form validation',
-      'Zod - TypeScript-first schema validation',
-      'Vercel Analytics - Real-time performance monitoring',
-      'Resend - Email API for contact form',
-      'Next.js Metadata API - SEO optimization with Open Graph'
+      'Next.js 16 with App Router and server components',
+      'React 19 with concurrent features',
+      'TypeScript 5 in strict mode',
+      'Tailwind CSS 4 with JIT compiler',
+      'Framer Motion for scroll-triggered animations',
+      'React Hook Form + Zod for form validation',
+      'Resend for contact form emails',
+      'Vercel for hosting and analytics',
+      'Next.js Metadata API for SEO and Open Graph'
     ],
     deliverables: [
       'Fully responsive Next.js portfolio website',
-      'Custom 3D logo animation with clip-path masking',
+      'Custom 3D logo animation (pure CSS, no libraries)',
       'Four detailed project case study pages',
       'Interactive contact form with validation',
       'About page with founder story and tech stack',
       'Services page with six service offerings',
-      'SEO optimization with sitemap and robots.txt',
-      'Structured data (schema.org) for local business',
+      'SEO implementation (sitemap, robots.txt, schema.org)',
       'Dark theme with custom grid background',
-      'Mobile-optimized navigation with animated menu',
-      'Performance optimization (95+ Lighthouse scores)',
-      'Vercel deployment with automatic CI/CD'
+      'Mobile navigation with animated hamburger menu',
+      'Performance optimization (96/92/100/100 Lighthouse)',
+      'Vercel deployment with CI/CD from GitHub'
     ]
   }
 ];

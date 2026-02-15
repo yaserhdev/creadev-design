@@ -41,7 +41,7 @@ export default function Hero() {
             </Link>
             
             <Link 
-              href="/work"
+              href="/projects"
               className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all hover:shadow-lg"
             >
               View Our Projects

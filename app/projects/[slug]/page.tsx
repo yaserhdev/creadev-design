@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     openGraph: {
       title: `${project.title} - CreaDev Design`,
       description: project.description,
-      url: `https://creadevdesign.com/work/${slug}`,
+      url: `https://creadevdesign.com/projects/${slug}`,
     },
   };
 }
@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <ScrollAnimation>
               {/* Back Link */}
               <Link 
-                href="/work"
+                href="/projects"
                 className="inline-flex items-center text-brand-purple hover:text-brand-pink transition-colors mb-6"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <ScrollAnimation delay={0.2}>
             <div className="max-w-6xl mx-auto">
               {projectImages[project.slug] ? (
-                <div className="aspect-video relative rounded-2xl overflow-hidden shadow-2xl">
+                <div className="aspect-video relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                   <Image
                     src={projectImages[project.slug]}
                     alt={`${project.title} Screenshot`}
@@ -313,7 +313,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   Start Your Project
                 </Link>
                 <Link 
-                  href="/work"
+                  href="/projects"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View More Projects

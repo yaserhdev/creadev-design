@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: 'https://creadevdesign.com/work',
+      url: 'https://creadevdesign.com/projects',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

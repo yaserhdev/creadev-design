@@ -273,7 +273,7 @@ export default function AboutPage() {
                   Let's Talk
                 </Link>
                 <Link 
-                  href="/work"
+                  href="/projects"
                   className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View Our Projects

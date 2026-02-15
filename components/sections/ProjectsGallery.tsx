@@ -14,7 +14,7 @@ const projectImages: Record<string, string> = {
   'creadev-design': '/images/projects/creadev_design.png',
 };
 
-export default function WorkGallery() {
+export default function ProjectsGallery() {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const filteredProjects = activeCategory === 'All'
@@ -60,7 +60,7 @@ export default function WorkGallery() {
           {filteredProjects.map((project, index) => (
             <ScrollAnimation key={project.id} delay={index * 0.1}>
               <div className="h-full">
-                <Link href={`/work/${project.slug}`}>
+                <Link href={`/projects/${project.slug}`}>
                   <div className="group cursor-pointer h-full flex flex-col">
                     <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
                       {/* Project Image */}
@@ -121,7 +121,7 @@ export default function WorkGallery() {
         <ScrollAnimation delay={0.6}>
           <div className="text-center mt-16">
             <Link
-              href="/work"
+              href="/projects"
               className="inline-block px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all hover:shadow-lg"
             >
               View All Projects

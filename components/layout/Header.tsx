@@ -33,7 +33,7 @@ export default function Header() {
               Services
             </Link>
             <Link 
-              href="/work" 
+              href="/projects" 
               className="text-gray-700 hover:text-brand-purple transition-colors"
             >
               Projects
