@@ -24,6 +24,28 @@ export const metadata: Metadata = {
   authors: [{ name: 'Yaser - CreaDev Design' }],
   creator: 'CreaDev Design',
   publisher: 'CreaDev Design',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://creadevdesign.com',
+    siteName: 'CreaDev Design',
+    title: 'CreaDev Design - Professional Web Development',
+    description: 'Custom websites for businesses that refuse to blend in. Based in Fairfax, VA.',
+    images: [
+      {
+        url: '/og-image.png', // We'll create this
+        width: 1200,
+        height: 630,
+        alt: 'CreaDev Design - Professional Web Development',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CreaDev Design - Professional Web Development',
+    description: 'Custom websites for businesses that refuse to blend in.',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({
