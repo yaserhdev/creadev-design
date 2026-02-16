@@ -10,9 +10,11 @@ interface CharacterAnimationProps {
 
 export default function CharacterAnimation({ text, className = '' }: CharacterAnimationProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   // Detect mobile devices to avoid animation issues
   useEffect(() => {
+    setIsClient(true);
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -23,21 +25,37 @@ export default function CharacterAnimation({ text, className = '' }: CharacterAn
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // On mobile, use simpler fade-in animation instead of character-by-character
+  // Prevent hydration mismatch - show nothing until client-side
+  if (!isClient) {
+    return <span className={className}>{text}</span>;
+  }
+
+  // MOBILE: Word-by-word animation (smoother than character-by-character)
   if (isMobile) {
+    const words = text.split(' ');
+    
     return (
-      <motion.span
-        className={className}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      >
-        {text}
-      </motion.span>
+      <span className={className}>
+        {words.map((word, index) => (
+          <motion.span
+            key={`word-${index}`}
+            className="inline-block mr-[0.25em]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: index * 0.08, // Stagger words
+              duration: 0.5,
+              ease: [0.22, 1, 0.36, 1], // Smooth easing
+            }}
+          >
+            {word}
+          </motion.span>
+        ))}
+      </span>
     );
   }
 
-  // Desktop: Use character-by-character animation
+  // DESKTOP: Character-by-character animation
   const words = text.split(' ');
   
   return (
