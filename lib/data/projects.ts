@@ -24,8 +24,10 @@ export const categories = [
   'All',
   'E-commerce',
   'Business',
+  'Portfolio',
   'Restaurant',
-  'Video Production'
+  'Video Production',
+  'Auto Detailing'
 ];
 
 export const projects: Project[] = [
@@ -122,7 +124,7 @@ export const projects: Project[] = [
     id: 3,
     slug: 'mr-xtractor',
     title: 'Mr. Xtractor Auto Detailing',
-    categories: ['Business/Service', 'Auto Detailing'],
+    categories: ['Business', 'Auto Detailing'],
     description: 'Custom single-page site for a Northern VA mobile detailing business featuring dual 3D carousels, stacked before/after gallery, and OrbisX scheduling integration.',
     tags: ['HTML5', 'Bulma CSS', 'SCSS', 'JavaScript', 'GSAP 3.x', 'OrbisX'],
     image: '/images/projects/mr_xtractor.png',
@@ -168,7 +170,7 @@ export const projects: Project[] = [
     id: 4,
     slug: 'creadev-design',
     title: 'CreaDev Design Portfolio',
-    categories: ['Business/Service', 'Portfolio'],
+    categories: ['Business', 'Portfolio'],
     description: 'Modern portfolio website built with Next.js and Tailwind CSS, featuring a custom 3D logo animation, scroll-triggered reveals, and a case study system for showcasing client work.',
     tags: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'Resend', 'Vercel'],
     image: '/images/projects/creadev_design.png',

@@ -21,7 +21,14 @@ export default function CountUp({
   decimals = 0,
 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  
+  // FIXED: More lenient intersection observer for mobile
+  const isInView = useInView(ref, { 
+    once: true, 
+    margin: '0px 0px -50px 0px', // Less aggressive margin for mobile
+    amount: 0.3 // Trigger when 30% visible instead of default
+  });
+  
   const [hasAnimated, setHasAnimated] = useState(false);
 
   const motionValue = useMotionValue(0);

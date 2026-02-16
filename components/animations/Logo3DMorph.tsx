@@ -13,7 +13,7 @@ export default function Logo3DMorph() {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative flex items-center justify-center w-full">
       <style jsx>{`
         @keyframes slideC {
           from { transform: translate(110px, 12.2px); }
@@ -52,13 +52,14 @@ export default function Logo3DMorph() {
         }
       `}</style>
 
-      {/* Logo Container - Made bigger (600px from 420px) */}
-      <div className="relative w-[600px] h-[130px] flex items-center justify-center">
+      {/* Logo Container - NOW RESPONSIVE */}
+      <div className="relative w-full max-w-[600px] h-[130px] flex items-center justify-center px-4">
         <svg 
-          width="600" 
-          height="130" 
+          width="100%" 
+          height="100%" 
           viewBox="0 0 280 60"
-          className="drop-shadow-2xl"
+          className="drop-shadow-2xl max-w-full h-auto"
+          preserveAspectRatio="xMidYMid meet"
         >
           <defs>
             <linearGradient id="morph-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">

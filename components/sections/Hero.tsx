@@ -4,17 +4,18 @@ import MagneticButton from '@/components/animations/MagneticButton';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* 3D Rotating Logo */}
-          <div className="mb-8 flex justify-center">
+          {/* 3D Rotating Logo - NOW CONSTRAINED */}
+          <div className="mb-8 flex justify-center w-full max-w-full overflow-hidden">
             <Logo3D />
           </div>
           
-          {/* Animated Heading - Scales down properly, wraps if needed */}
+          {/* Animated Heading - FIXED FOR MOBILE VISIBILITY */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight px-4">
-            <span className="bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
+            {/* Simplified for mobile - no character animation issues */}
+            <span className="inline-block bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
               <CharacterAnimation 
                 text="We Build Websites People Actually Talk About"
               />
