@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import CountUp from '@/components/animations/CountUp';
+import MagneticButton from '@/components/animations/MagneticButton';
 
 export const metadata: Metadata = {
   title: 'About - CreaDev Design',
@@ -85,7 +87,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - NOW WITH ANIMATED COUNTERS */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -97,7 +99,7 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.1}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    100%
+                    <CountUp end={100} duration={2} suffix="%" />
                   </div>
                   <div className="text-gray-300 font-medium">Hand-Coded</div>
                 </div>
@@ -106,7 +108,7 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.2}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    4
+                    <CountUp end={4} duration={2} />
                   </div>
                   <div className="text-gray-300 font-medium">Projects Delivered</div>
                 </div>
@@ -115,7 +117,7 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.3}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    4
+                    <CountUp end={4} duration={2} />
                   </div>
                   <div className="text-gray-300 font-medium">Industries Served</div>
                 </div>
@@ -124,7 +126,7 @@ export default function AboutPage() {
               <ScrollAnimation delay={0.4}>
                 <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg hover:bg-gray-800 transition-all">
                   <div className="text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    15+
+                    <CountUp end={15} duration={2} suffix="+" />
                   </div>
                   <div className="text-gray-300 font-medium">Technologies</div>
                 </div>
@@ -214,9 +216,6 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-100">Technologies</h2>
-              {/* <p className="text-xl text-gray-300 text-center mb-12">
-                Modern, proven tools for building fast, reliable websites
-              </p> */}
             </ScrollAnimation>
 
             <div className="space-y-8">
@@ -254,7 +253,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WITH MAGNETIC BUTTONS */}
       <section className="py-24 bg-gradient-to-br from-brand-pink to-brand-purple text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -266,18 +265,20 @@ export default function AboutPage() {
                 Every project starts with a conversation — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <MagneticButton
                   href="/contact"
+                  strength={0.3}
                   className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
                   Let's Talk
-                </Link>
-                <Link 
+                </MagneticButton>
+                <MagneticButton
                   href="/projects"
+                  strength={0.25}
                   className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View Our Projects
-                </Link>
+                </MagneticButton>
               </div>
             </ScrollAnimation>
           </div>

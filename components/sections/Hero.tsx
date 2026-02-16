@@ -1,6 +1,6 @@
 import CharacterAnimation from '@/components/animations/CharacterAnimation';
 import Logo3D from '@/components/animations/Logo3DMorph';
-import Link from 'next/link';
+import MagneticButton from '@/components/animations/MagneticButton';
 
 export default function Hero() {
   return (
@@ -31,21 +31,23 @@ export default function Hero() {
             Premium websites without the agency price tag.
           </p>
           
-          {/* CTA Buttons */}
+          {/* CTA Buttons - BOTH NOW MAGNETIC */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <MagneticButton 
               href="/contact"
+              strength={0.3}
               className="group relative px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold overflow-hidden transition-all hover:shadow-xl hover:scale-105"
             >
               <span className="relative z-10">Let's Talk</span>
-            </Link>
+            </MagneticButton>
             
-            <Link 
+            <MagneticButton 
               href="/projects"
+              strength={0.25}
               className="px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all hover:shadow-lg"
             >
               View Our Projects
-            </Link>
+            </MagneticButton>
           </div>
           
           {/* Scroll Indicator */}

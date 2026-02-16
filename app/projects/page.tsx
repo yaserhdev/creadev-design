@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import TiltCard from '@/components/animations/TiltCard';
+import MagneticButton from '@/components/animations/MagneticButton';
+import CountUp from '@/components/animations/CountUp';
 import { projects } from '@/lib/data/projects';
 
 export const metadata: Metadata = {
@@ -55,23 +58,23 @@ export default function WorkPage() {
                 Handcrafted websites that help businesses stand out online
               </p>
               
-              {/* Stats */}
+              {/* Stats - NOW WITH ANIMATED COUNTERS */}
               <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
                 <div className="p-4 bg-gray-900 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                    {totalProjects}
+                    <CountUp end={totalProjects} duration={2} />
                   </div>
                   <div className="text-sm text-gray-300 mt-1">Projects</div>
                 </div>
                 <div className="p-4 bg-gray-900 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                    {industriesServed}
+                    <CountUp end={industriesServed} duration={2} />
                   </div>
                   <div className="text-sm text-gray-300 mt-1">Industries</div>
                 </div>
                 <div className="p-4 bg-gray-900 rounded-xl border border-white/10">
                   <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent">
-                    {totalTechnologies}
+                    <CountUp end={totalTechnologies} duration={2} suffix="+" />
                   </div>
                   <div className="text-sm text-gray-300 mt-1">Technologies</div>
                 </div>
@@ -155,23 +158,23 @@ export default function WorkPage() {
                       </div>
                     </div>
 
-                    {/* CTAs */}
+                    {/* CTAs - NOW MAGNETIC */}
                     <div className="flex gap-4">
-                      <Link 
+                      <MagneticButton
                         href={`/projects/${featuredProject.slug}`}
+                        strength={0.3}
                         className="px-6 py-3 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg hover:scale-105"
                       >
                         View Case Study
-                      </Link>
+                      </MagneticButton>
                       {featuredProject.link && (
-                        <a 
+                        <MagneticButton
                           href={featuredProject.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          strength={0.25}
                           className="px-6 py-3 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all"
                         >
                           Visit Site
-                        </a>
+                        </MagneticButton>
                       )}
                     </div>
                   </div>
@@ -182,7 +185,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* All Projects Grid */}
+      {/* All Projects Grid - WITH 3D TILT */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
@@ -197,84 +200,90 @@ export default function WorkPage() {
                 <ScrollAnimation key={project.id} delay={index * 0.1}>
                   <div className="h-full">
                     <Link href={`/projects/${project.slug}`}>
-                      <div className="group cursor-pointer h-full flex flex-col bg-gray-900 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-gray-800 transition-all duration-300">
-                        {/* Project Image */}
-                        <div className="relative overflow-hidden rounded-t-xl">
-                          <div className="aspect-video relative bg-gray-800">
-                            {projectImages[project.slug] ? (
-                              <Image
-                                src={projectImages[project.slug]}
-                                alt={`${project.title} - ${project.description}`}
-                                fill
-                                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                              />
-                            ) : (
-                              <div className="w-full h-full bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <span className="text-6xl">🚀</span>
+                      <TiltCard
+                        tiltMaxAngle={8}
+                        scale={1.02}
+                        className="h-full"
+                      >
+                        <div className="group cursor-pointer h-full flex flex-col bg-gray-900 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple hover:bg-gray-800 transition-all duration-300">
+                          {/* Project Image */}
+                          <div className="relative overflow-hidden rounded-t-xl">
+                            <div className="aspect-video relative bg-gray-800">
+                              {projectImages[project.slug] ? (
+                                <Image
+                                  src={projectImages[project.slug]}
+                                  alt={`${project.title} - ${project.description}`}
+                                  fill
+                                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                                  sizes="(max-width: 1024px) 100vw, 50vw"
+                                />
+                              ) : (
+                                <div className="w-full h-full bg-gradient-to-br from-brand-pink via-brand-purple to-brand-pink opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                  <span className="text-6xl">🚀</span>
+                                </div>
+                              )}
+                            </div>
+
+                            {/* Hover Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                              <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                <p className="text-sm mb-2">View Case Study →</p>
                               </div>
-                            )}
+                            </div>
                           </div>
 
-                          {/* Hover Overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                              <p className="text-sm mb-2">View Case Study →</p>
+                          {/* Project Info */}
+                          <div className="p-6 flex-grow flex flex-col">
+                            {/* Category Badges */}
+                            <div className="mb-3 flex flex-wrap gap-2">
+                              {project.categories.map((cat) => (
+                                <span 
+                                  key={cat}
+                                  className="px-3 py-1 bg-brand-purple/20 text-brand-purple text-sm rounded-full font-medium border border-brand-purple/30"
+                                >
+                                  {cat}
+                                </span>
+                              ))}
+                            </div>
+
+                            <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-100 group-hover:text-brand-purple transition-colors">
+                              {project.title}
+                            </h3>
+                            
+                            <p className="text-gray-300 mb-4 text-lg leading-relaxed">
+                              {project.description}
+                            </p>
+
+                            {/* Bottom section - always aligned */}
+                            <div className="mt-auto">
+                              {/* Tech Stack */}
+                              <div className="mb-4">
+                                <p className="text-sm font-semibold text-gray-200 mb-2">Technologies:</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {project.tags.map((tag) => (
+                                    <span 
+                                      key={tag}
+                                      className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
+                                    >
+                                      {tag}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* View Case Study Link */}
+                              <div className="pt-4 border-t border-white/10">
+                                <span className="text-brand-purple font-semibold group-hover:text-brand-pink transition-colors inline-flex items-center">
+                                  View Full Case Study
+                                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                  </svg>
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
-
-                        {/* Project Info */}
-                        <div className="p-6 flex-grow flex flex-col">
-                          {/* Category Badges */}
-                          <div className="mb-3 flex flex-wrap gap-2">
-                            {project.categories.map((cat) => (
-                              <span 
-                                key={cat}
-                                className="px-3 py-1 bg-brand-purple/20 text-brand-purple text-sm rounded-full font-medium border border-brand-purple/30"
-                              >
-                                {cat}
-                              </span>
-                            ))}
-                          </div>
-
-                          <h3 className="text-2xl md:text-3xl font-bold mb-3 text-gray-100 group-hover:text-brand-purple transition-colors">
-                            {project.title}
-                          </h3>
-                          
-                          <p className="text-gray-300 mb-4 text-lg leading-relaxed">
-                            {project.description}
-                          </p>
-
-                          {/* Bottom section - always aligned */}
-                          <div className="mt-auto">
-                            {/* Tech Stack */}
-                            <div className="mb-4">
-                              <p className="text-sm font-semibold text-gray-200 mb-2">Technologies:</p>
-                              <div className="flex flex-wrap gap-2">
-                                {project.tags.map((tag) => (
-                                  <span 
-                                    key={tag}
-                                    className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-white/10 group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-colors"
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-
-                            {/* View Case Study Link */}
-                            <div className="pt-4 border-t border-white/10">
-                              <span className="text-brand-purple font-semibold group-hover:text-brand-pink transition-colors inline-flex items-center">
-                                View Full Case Study
-                                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      </TiltCard>
                     </Link>
                   </div>
                 </ScrollAnimation>
@@ -284,7 +293,7 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WITH MAGNETIC BUTTONS */}
       <section className="py-24 bg-gradient-to-br from-brand-pink to-brand-purple text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -296,18 +305,20 @@ export default function WorkPage() {
                 Tell us about your business and we'll show you what's possible — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <MagneticButton
                   href="/contact"
+                  strength={0.3}
                   className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
                   Let's Talk
-                </Link>
-                <Link 
+                </MagneticButton>
+                <MagneticButton
                   href="/services"
+                  strength={0.25}
                   className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View Services
-                </Link>
+                </MagneticButton>
               </div>
             </ScrollAnimation>
           </div>

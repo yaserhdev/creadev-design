@@ -1,4 +1,6 @@
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import TiltCard from '@/components/animations/TiltCard';
+import MagneticButton from '@/components/animations/MagneticButton';
 import { services } from '@/lib/data/services';
 
 export default function Services() {
@@ -17,59 +19,66 @@ export default function Services() {
           </ScrollAnimation>
         </div>
 
-        {/* Services Grid - Added h-full to make cards equal height */}
+        {/* Services Grid - WITH 3D TILT EFFECT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ScrollAnimation key={service.id} delay={index * 0.1} className="h-full">
-              <div className="group p-8 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 hover:-translate-y-2 h-full flex flex-col bg-gray-900">
-                {/* Icon */}
-                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+              <TiltCard 
+                tiltMaxAngle={10}
+                scale={1.02}
+                className="h-full"
+              >
+                <div className="group p-8 border border-white/10 rounded-xl hover:shadow-2xl hover:border-brand-purple transition-all duration-300 h-full flex flex-col bg-gray-900">
+                  {/* Icon */}
+                  <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    {service.icon}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-purple transition-colors">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+
+                  {/* Features List - flex-grow pushes this to fill remaining space */}
+                  <ul className="space-y-2 flex-grow">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg 
+                          className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" 
+                          fill="currentColor" 
+                          viewBox="0 0 20 20"
+                        >
+                          <path 
+                            fillRule="evenodd" 
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
+                            clipRule="evenodd" 
+                          />
+                        </svg>
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-brand-purple transition-colors">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-4">
-                  {service.description}
-                </p>
-
-                {/* Features List - flex-grow pushes this to fill remaining space */}
-                <ul className="space-y-2 flex-grow">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start">
-                      <svg 
-                        className="w-5 h-5 text-brand-purple mr-2 mt-0.5 flex-shrink-0" 
-                        fill="currentColor" 
-                        viewBox="0 0 20 20"
-                      >
-                        <path 
-                          fillRule="evenodd" 
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
-                          clipRule="evenodd" 
-                        />
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              </TiltCard>
             </ScrollAnimation>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA - NOW MAGNETIC */}
         <ScrollAnimation delay={0.6}>
           <div className="text-center mt-16">
-            <a 
+            <MagneticButton
               href="/contact"
+              strength={0.3}
               className="inline-block px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 hover:scale-105 transition-all shadow-lg"
             >
               Start Your Project
-            </a>
+            </MagneticButton>
           </div>
         </ScrollAnimation>
       </div>

@@ -3,6 +3,8 @@ import { projects } from '@/lib/data/projects';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import CountUp from '@/components/animations/CountUp';
+import MagneticButton from '@/components/animations/MagneticButton';
 import Image from 'next/image';
 
 const projectImages: Record<string, string> = {
@@ -84,19 +86,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
 
-              {/* Visit Site Button */}
+              {/* Visit Site Button - NOW MAGNETIC */}
               {project.link && (
-                <a 
+                <MagneticButton
                   href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  strength={0.3}
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-brand-pink to-brand-purple text-white rounded-lg font-semibold hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
                 >
                   Visit Live Site
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                </a>
+                </MagneticButton>
               )}
             </ScrollAnimation>
           </div>
@@ -129,7 +130,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      {/* Overview Stats */}
+      {/* Overview Stats - NOW WITH ANIMATED COUNTERS */}
       {project.deliverables && (
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -149,7 +150,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
                     <div className="text-4xl mb-2">⚡</div>
                     <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                      {project.tags.length}
+                      <CountUp end={project.tags.length} duration={2} />
                     </div>
                     <div className="text-gray-300">Technologies Used</div>
                   </div>
@@ -159,7 +160,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
                     <div className="text-4xl mb-2">📦</div>
                     <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                      {project.deliverables.length}
+                      <CountUp end={project.deliverables.length} duration={2} />
                     </div>
                     <div className="text-gray-300">Deliverables</div>
                   </div>
@@ -294,7 +295,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - WITH MAGNETIC BUTTONS */}
       <section className="py-24 bg-gradient-to-br from-brand-pink to-brand-purple text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -306,18 +307,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 Let's talk about your project — no commitment, no pressure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <MagneticButton
                   href="/contact"
+                  strength={0.3}
                   className="px-8 py-4 bg-white text-brand-purple rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105"
                 >
                   Start Your Project
-                </Link>
-                <Link 
+                </MagneticButton>
+                <MagneticButton
                   href="/projects"
+                  strength={0.25}
                   className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-brand-purple transition-all"
                 >
                   View More Projects
-                </Link>
+                </MagneticButton>
               </div>
             </ScrollAnimation>
           </div>

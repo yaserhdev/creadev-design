@@ -1,12 +1,14 @@
 import ScrollAnimation from '@/components/animations/ScrollAnimation';
+import CountUp from '@/components/animations/CountUp';
+import MagneticButton from '@/components/animations/MagneticButton';
 import Image from 'next/image';
 
 export default function About() {
   const stats = [
-    { number: '3+', label: 'Years Experience' },
-    { number: '0', label: 'Templates Used' },
-    { number: '24hr', label: 'Response Time' },
-    { number: '5⋆', label: 'Client Rated' },
+    { number: 3, label: 'Years Experience', suffix: '+' },
+    { number: 0, label: 'Templates Used', suffix: '' },
+    { number: 24, label: 'Response Time', suffix: 'hr' },
+    { number: 5, label: 'Client Rated', suffix: '⋆' },
   ];
 
   const whyChooseUs = [
@@ -110,7 +112,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Stats Section - Responsive sizing */}
+          {/* Stats Section - WITH ANIMATED COUNTERS */}
           <ScrollAnimation delay={0.4}>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-16 pt-16 border-t border-gray-200">
               {stats.map((stat, index) => (
@@ -119,7 +121,11 @@ export default function About() {
                   className="text-center p-4 lg:p-6 rounded-xl bg-gray-900 border border-white/10 shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                    {stat.number}
+                    <CountUp 
+                      end={stat.number}
+                      duration={2}
+                      suffix={stat.suffix}
+                    />
                   </div>
                   <div className="text-sm sm:text-base text-gray-600 font-medium">
                     {stat.label}
@@ -129,15 +135,16 @@ export default function About() {
             </div>
           </ScrollAnimation>
 
-          {/* CTA */}
+          {/* CTA - NOW MAGNETIC */}
           <ScrollAnimation delay={0.6}>
             <div className="text-center mt-12">
-              <a 
+              <MagneticButton
                 href="/about"
+                strength={0.25}
                 className="inline-block px-8 py-4 border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all hover:shadow-lg"
               >
                 Learn More About Us
-              </a>
+              </MagneticButton>
             </div>
           </ScrollAnimation>
         </div>
