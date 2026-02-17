@@ -130,26 +130,26 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      {/* Overview Stats - NOW WITH ANIMATED COUNTERS */}
+      {/* Overview Stats - FIXED WITH EQUAL HEIGHT CARDS */}
       {project.deliverables && (
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ScrollAnimation delay={0.1}>
-                  <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
+                  <div className="h-full text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg flex flex-col justify-center">
                     <div className="text-4xl mb-2">🎯</div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
-                      {project.categories.join(' / ')}
+                    <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2 min-h-[2.5rem] flex items-center justify-center">
+                      <span className="leading-tight">{project.categories.join(' / ')}</span>
                     </div>
                     <div className="text-gray-300">Project Type</div>
                   </div>
                 </ScrollAnimation>
 
                 <ScrollAnimation delay={0.2}>
-                  <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
+                  <div className="h-full text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg flex flex-col justify-center">
                     <div className="text-4xl mb-2">⚡</div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2 min-h-[2.5rem] flex items-center justify-center">
                       <CountUp end={project.tags.length} duration={2} />
                     </div>
                     <div className="text-gray-300">Technologies Used</div>
@@ -157,9 +157,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </ScrollAnimation>
 
                 <ScrollAnimation delay={0.3}>
-                  <div className="text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg">
+                  <div className="h-full text-center p-8 bg-gray-900 rounded-xl border border-white/10 shadow-lg flex flex-col justify-center">
                     <div className="text-4xl mb-2">📦</div>
-                    <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent mb-2 min-h-[2.5rem] flex items-center justify-center">
                       <CountUp end={project.deliverables.length} duration={2} />
                     </div>
                     <div className="text-gray-300">Deliverables</div>
