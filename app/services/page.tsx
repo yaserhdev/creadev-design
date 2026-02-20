@@ -149,7 +149,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-100">Testing & Refinement</h3>
                     <p className="text-gray-300">
-                      I test across devices and browsers to make sure everything works before we go live.
+                      We test across devices and browsers to make sure everything works before we go live.
                     </p>
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-100">Launch & Support</h3>
                     <p className="text-gray-300">
-                      We handle hosting, DNS, and launch. After that, I'm here for updates and maintenance if you need it.
+                      We handle hosting, DNS, and launch. After that, we're here for updates and maintenance if you need it.
                     </p>
                   </div>
                 </div>
