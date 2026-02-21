@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/StructuredData";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: 'Custom websites for businesses that refuse to blend in. Based in Fairfax, VA.',
     images: [
       {
-        url: '/og-image.png', // We'll create this
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'CreaDev Design - Professional Web Development',
@@ -58,6 +58,23 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <StructuredData />
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-R307RPJVX3"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-R307RPJVX3');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
@@ -66,7 +83,6 @@ export default function RootLayout({
         {children}
         <Footer />
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );
