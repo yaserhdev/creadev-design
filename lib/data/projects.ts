@@ -69,7 +69,7 @@ export const projects: Project[] = [
       'SEO implementation (schema.org, meta tags, sitemap)'
     ],
     testimonial: {
-      text: 'Working with CreaDev was a smooth and positive experience from end to end. Yaser took the time to clearly explain the tools and capabilities available to us and guided us toward the right solutions. Our site is clean, easy to navigate, and does exactly what we needed- present our menu clearly, give customers an easy way to reach us, and connect them to online ordering. He made the process simple and genuinely put in the time and effort to help bring the site to life. Yaser is true professional, solutions-oriented, and consistently timely throughout the entire project. We highly recommend him to anyone looking for a reliable and thoughtful developer.',
+      text: 'Working with CreaDev Design was a smooth and positive experience from end to end. Yaser took the time to clearly explain the tools and capabilities available to us and guided us toward the right solutions. Our site is clean, easy to navigate, and does exactly what we needed - present our menu clearly, give customers an easy way to reach us, and connect them to online ordering. He made the process simple and genuinely put in the time and effort to help bring the site to life. Yaser is a true professional, solutions-oriented, and consistently timely throughout the entire project. We highly recommend him to anyone looking for a reliable and thoughtful developer.',
       author: 'Rasool S.',
       position: 'Owner, Noosh Grill'
     }
