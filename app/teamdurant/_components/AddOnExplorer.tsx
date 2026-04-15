@@ -15,17 +15,17 @@ const addOns: AddOn[] = [
     id: 'registration',
     number: '01',
     title: 'Camp Registration System',
-    shortDesc: 'Custom registration with payments and waivers.',
+    shortDesc: 'Online registration with payments and waivers.',
     longDesc:
-      'Multi-step registration form, secure Stripe payments, e-signed waivers, capacity management, automated confirmation emails, and an admin panel for monitoring signups in real time.',
+      'A registration form built directly into the site, with secure payments, digital waivers, capacity limits per session, automated confirmation emails, and a simple dashboard to view signups as they come in.',
   },
   {
     id: 'rosters',
     number: '02',
     title: 'Player Rosters',
-    shortDesc: 'Individual player profiles and stats.',
+    shortDesc: 'Individual profile pages for each player.',
     longDesc:
-      'SEO-optimized profile pages for each player. Each profile is independently indexable, providing search visibility for individual athletes.',
+      'Each player gets their own page on the site with their information and stats. These pages show up individually in Google search results, giving each athlete direct online visibility.',
   },
   {
     id: 'alumni',
@@ -33,7 +33,7 @@ const addOns: AddOn[] = [
     title: 'Alumni Database',
     shortDesc: 'College commitments and outcomes.',
     longDesc:
-      'A filterable database documenting where Team Durant alumni continued their playing careers. A clear public record of program outcomes.',
+      'A searchable, filterable database documenting where Team Durant alumni continued their playing careers. Visitors can sort by year, gender, or school.',
   },
   {
     id: 'blog',
@@ -41,7 +41,7 @@ const addOns: AddOn[] = [
     title: 'News & Blog',
     shortDesc: 'Updates, announcements, and articles.',
     longDesc:
-      'A news section with structured SEO data, social sharing, and Open Graph images. Suitable for announcements, recaps, and building organic search traffic.',
+      'A news section built to show up in Google search results and display properly when shared on social media. Suitable for announcements, recaps, and building long-term visibility online.',
   },
   {
     id: 'portal',
@@ -49,15 +49,15 @@ const addOns: AddOn[] = [
     title: 'Member Portal',
     shortDesc: 'Private area for players and parents.',
     longDesc:
-      'Gated content for current players and families: practice schedules, announcements, document uploads, and private photo galleries.',
+      'A password-protected section for current players and families: practice schedules, announcements, document uploads, and private photo galleries.',
   },
   {
     id: 'custom',
     number: '06',
     title: 'Beyond This List',
-    shortDesc: 'Additional custom features can be scoped on request.',
+    shortDesc: 'Additional features can be scoped on request.',
     longDesc:
-      'Going custom removes platform restrictions, so most features not listed here can still be built. Additional requirements can be discussed during the discovery call.',
+      'Going custom removes platform limitations, so most features not listed here can still be built. Additional requirements can be discussed during the discovery call.',
   },
 ];
 
