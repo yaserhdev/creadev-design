@@ -275,8 +275,7 @@ export default function TeamDurantPage() {
                     <p>
                       The current site is well-designed and brand-consistent. The visual
                       identity carries through every page, navigation is clear, and the
-                      content hierarchy makes sense. The video backgrounds on the homepage
-                      and Skills Camp page are effective, the marquee text reinforces the
+                      content hierarchy makes sense. The video backgrounds are effective, the marquee text reinforces the
                       brand, and the overall structure delivers what a visitor needs from an
                       informational hub.
                     </p>
