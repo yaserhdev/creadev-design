@@ -216,7 +216,7 @@ export default function TeamDurantPage() {
                         Starting at
                       </span>
                       <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent leading-none">
-                        <PriceCounter value={10000} />
+                        <PriceCounter value={7500} />
                       </div>
                     </div>
                     <div className="text-base text-gray-400 mt-3 mb-8">
