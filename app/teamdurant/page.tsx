@@ -703,7 +703,7 @@ export default function TeamDurantPage() {
                     </div>
                     <div className="text-xs text-gray-500 mb-2">Starting at</div>
                     <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent leading-none">
-                      $10,000
+                      $7,500
                     </div>
                   </div>
                   <div className="p-6 md:p-8 bg-gray-900/40 border border-white/10 rounded-2xl">
