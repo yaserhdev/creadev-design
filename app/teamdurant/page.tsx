@@ -39,6 +39,40 @@ const routeBIncluded = [
   'Ongoing site management, updates, and content changes',
 ];
 
+// Comparison data: each limitation, what Route A does about it, what Route B does about it
+const comparisonItems = [
+  {
+    limitation: 'No shop or commerce',
+    routeA: 'Adds Squarespace Commerce with built-in checkout',
+    routeB: 'Adds custom-built shop on Stripe with no platform fees',
+  },
+  {
+    limitation: 'No camp registration system',
+    routeA: 'Requires embedded third-party tools (off-brand mid-flow)',
+    routeB: 'Available as a fully branded, on-domain custom system',
+  },
+  {
+    limitation: 'Skills Camp page uses image-based content',
+    routeA: 'Replaced with editable text, search-indexable',
+    routeB: 'Rebuilt as a real page with optional registration flow',
+  },
+  {
+    limitation: 'Performance ceiling on Squarespace',
+    routeA: 'Optimized within Squarespace’s constraints',
+    routeB: 'Built for Lighthouse 95+ across the entire site',
+  },
+  {
+    limitation: 'Design and animation limited by platform',
+    routeA: 'Worked within Squarespace’s template system',
+    routeB: 'Fully custom design with no platform constraints',
+  },
+  {
+    limitation: 'No code ownership — site cannot be migrated',
+    routeA: 'Site remains a Squarespace property (continued rental)',
+    routeB: 'Full ownership of code, design, and infrastructure',
+  },
+];
+
 export default function TeamDurantPage() {
   return (
     <main className="text-foreground overflow-hidden">
@@ -70,9 +104,8 @@ export default function TeamDurantPage() {
                   the site is currently managed by an external developer.
                 </p>
                 <p>
-                  The objective is twofold: add a place to sell merchandise, and consolidate
-                  ongoing site management under a single point of contact. There are two
-                  viable ways to accomplish this.
+                  The objective is straightforward: add a place to sell merchandise on the
+                  site. There are two viable ways to accomplish this.
                 </p>
                 <p className="text-gray-300">
                   Below is a breakdown of each route, what it includes, and what it costs.
@@ -84,7 +117,261 @@ export default function TeamDurantPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          02 — AT A GLANCE
+          02 — CURRENT SITE ANALYSIS
+          ───────────────────────────────────────────────────────── */}
+      <section className="py-24 md:py-32 lg:py-40 relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-[20%] left-0 w-[700px] h-[700px] max-w-[80vw] bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.05)_0%,_transparent_60%)]" />
+          <div className="absolute bottom-[10%] right-0 w-[700px] h-[700px] max-w-[80vw] bg-[radial-gradient(circle_at_center,_rgba(236,72,153,0.05)_0%,_transparent_60%)]" />
+        </div>
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-5xl mx-auto">
+            <ScrollAnimation>
+              <div className="flex items-center gap-4 mb-10">
+                <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-purple uppercase whitespace-nowrap">
+                  02 — Current Site Analysis
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-brand-purple/40 to-transparent" />
+              </div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-gray-100 leading-[0.95] tracking-tight">
+                A look at{' '}
+                <span className={`${serif.className} italic font-normal text-gray-300`}>
+                  what&apos;s there now.
+                </span>
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl leading-relaxed">
+                An honest review of the current site — what works, what doesn&apos;t, and what
+                a custom build would change.
+              </p>
+            </ScrollAnimation>
+
+            {/* ─── Subsection: Where the current site succeeds ─── */}
+            <ScrollAnimation delay={0.1}>
+              <div className="mb-16">
+                <h3 className="text-[10px] md:text-xs tracking-[0.3em] font-mono text-brand-purple uppercase mb-6">
+                  Where the current site succeeds
+                </h3>
+                <div className="space-y-5 text-lg md:text-xl text-gray-300 leading-relaxed">
+                  <p>
+                    The current site is well-designed and brand-consistent. The visual
+                    identity carries through every page, navigation is clear, and the content
+                    hierarchy makes sense. Imagery is strong, the typography choices work,
+                    and the overall structure delivers what a visitor needs from an
+                    informational hub.
+                  </p>
+                  <p className="text-gray-400">
+                    These are the foundations to build on, regardless of which route is
+                    chosen.
+                  </p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Visual divider */}
+            <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-16" />
+
+            {/* ─── Subsection: Where the current site has limits ─── */}
+            <ScrollAnimation delay={0.15}>
+              <div className="mb-16">
+                <h3 className="text-[10px] md:text-xs tracking-[0.3em] font-mono text-brand-pink uppercase mb-6">
+                  Where the current site has limits
+                </h3>
+                <div className="space-y-5 text-lg md:text-xl text-gray-400 leading-relaxed mb-10">
+                  <p>
+                    The current site does what an informational site should do. The
+                    limitations show up the moment the program needs it to do anything more.
+                  </p>
+                </div>
+
+                <ul className="space-y-4">
+                  {/* Skills Camp — called out by name */}
+                  <li className="p-6 md:p-7 bg-gray-900/40 border border-white/10 rounded-2xl">
+                    <div className="text-sm font-bold text-gray-100 mb-2 tracking-wide">
+                      The Skills Camp page is image-based
+                    </div>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      Camp details are currently displayed as flyer screenshots rather than
+                      real text. This means the information isn&apos;t indexable by search
+                      engines, can&apos;t be updated without uploading new graphics,
+                      isn&apos;t accessible to screen readers, and doesn&apos;t connect to any
+                      registration flow. For the program&apos;s most revenue-relevant page,
+                      this is the most significant gap.
+                    </p>
+                  </li>
+
+                  <li className="p-6 md:p-7 bg-gray-900/40 border border-white/10 rounded-2xl">
+                    <div className="text-sm font-bold text-gray-100 mb-2 tracking-wide">
+                      No commerce or shop functionality
+                    </div>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      There is currently no way to sell merchandise on the site. Any
+                      commerce would need to be added from scratch.
+                    </p>
+                  </li>
+
+                  <li className="p-6 md:p-7 bg-gray-900/40 border border-white/10 rounded-2xl">
+                    <div className="text-sm font-bold text-gray-100 mb-2 tracking-wide">
+                      No camp registration system
+                    </div>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      Camp signups currently require off-platform coordination.
+                      Squarespace can host third-party registration tools through embeds, but
+                      those tools take visitors off the Team Durant site mid-flow and break
+                      the branded experience.
+                    </p>
+                  </li>
+
+                  <li className="p-6 md:p-7 bg-gray-900/40 border border-white/10 rounded-2xl">
+                    <div className="text-sm font-bold text-gray-100 mb-2 tracking-wide">
+                      Performance ceiling
+                    </div>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      Squarespace sites with this much imagery typically perform in the
+                      mid-70s on Lighthouse — fine for a brochure site, but well below what
+                      a custom build can achieve. This affects search rankings and mobile
+                      load times in ways that compound over time.
+                    </p>
+                  </li>
+
+                  <li className="p-6 md:p-7 bg-gray-900/40 border border-white/10 rounded-2xl">
+                    <div className="text-sm font-bold text-gray-100 mb-2 tracking-wide">
+                      Design and animation limited to what the platform allows
+                    </div>
+                    <p className="text-gray-400 leading-relaxed text-base">
+                      Squarespace operates on templates with a fixed range of customization.
+                      Anything beyond what the platform supports out of the box — premium
+                      animations, custom interactions, advanced layouts — is either
+                      impossible or requires workarounds that don&apos;t feel native.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </ScrollAnimation>
+
+            {/* Visual divider */}
+            <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-16" />
+
+            {/* ─── Subsection: On platform ownership ─── */}
+            <ScrollAnimation delay={0.2}>
+              <div className="mb-16">
+                <h3 className="text-[10px] md:text-xs tracking-[0.3em] font-mono text-brand-pink uppercase mb-6">
+                  On platform ownership
+                </h3>
+                <h4 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 mb-8 leading-[1.05] tracking-tight`}>
+                  What you actually{' '}
+                  <span className={`${serif.className} italic font-normal bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent`}>
+                    own.
+                  </span>
+                </h4>
+                <div className="space-y-6 text-lg md:text-xl text-gray-300 leading-relaxed">
+                  <p>
+                    This applies to every Squarespace site, not just teamdurant.com — but
+                    it&apos;s worth understanding clearly.
+                  </p>
+                  <p className="text-gray-400">
+                    On Squarespace, you don&apos;t own the code. You don&apos;t own the
+                    design files. You can&apos;t export the site to another host or hand it
+                    off to a different developer to maintain in any meaningful way. What you
+                    pay for each month is access — to a template, to Squarespace&apos;s
+                    hosting, and to the editor that lets you make changes within the
+                    platform&apos;s rules.
+                  </p>
+                  <p className="text-gray-400">
+                    If Squarespace ever changes its pricing, discontinues a feature, or
+                    becomes the wrong fit, the site doesn&apos;t come with you. It stays on
+                    Squarespace, or it gets rebuilt from scratch elsewhere.
+                  </p>
+                </div>
+
+                <div className="mt-10 p-8 md:p-10 bg-gradient-to-br from-gray-900/70 via-gray-900/40 to-gray-900/20 border border-white/10 rounded-3xl">
+                  <div className="text-[10px] md:text-xs tracking-[0.3em] font-mono text-gray-400 uppercase mb-5">
+                    What custom ownership means
+                  </div>
+                  <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+                    A custom build is the opposite. The code is yours. The design is yours.
+                    The site lives on your hosting account (or one CreaDev Design manages on
+                    your behalf), and it can be moved, modified, or handed to any
+                    competent developer at any time. There&apos;s no platform charging rent
+                    on top of the work, and no risk of the site disappearing if a
+                    third-party platform&apos;s priorities change.
+                  </p>
+                  <p className="mt-4 text-gray-400 leading-relaxed text-base md:text-lg">
+                    For a program built around a name as significant as Kevin Durant&apos;s,
+                    owning the digital infrastructure outright is meaningful in a way it
+                    isn&apos;t for most small businesses.
+                  </p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Visual divider */}
+            <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-16" />
+
+            {/* ─── Subsection: How each route addresses these ─── */}
+            <ScrollAnimation delay={0.25}>
+              <div>
+                <h3 className="text-[10px] md:text-xs tracking-[0.3em] font-mono text-brand-purple uppercase mb-6">
+                  How each route addresses these
+                </h3>
+                <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-10 max-w-3xl">
+                  Each limitation above can be addressed by either route — but in different
+                  ways and to different degrees. Side by side:
+                </p>
+
+                {/* Comparison table */}
+                <div className="space-y-3">
+                  {/* Header row (hidden on mobile) */}
+                  <div className="hidden md:grid grid-cols-12 gap-4 px-6 py-3 text-[10px] tracking-[0.3em] font-mono text-gray-600 uppercase">
+                    <div className="col-span-4">Limitation</div>
+                    <div className="col-span-4">Route A — Squarespace</div>
+                    <div className="col-span-4">Route B — Custom Build</div>
+                  </div>
+
+                  {comparisonItems.map((item, index) => (
+                    <div
+                      key={index}
+                      className="grid grid-cols-1 md:grid-cols-12 gap-4 p-6 bg-gray-900/40 border border-white/10 rounded-2xl hover:border-white/20 transition-colors duration-300"
+                    >
+                      {/* Limitation */}
+                      <div className="md:col-span-4">
+                        <div className="text-[10px] tracking-[0.3em] font-mono text-gray-600 uppercase mb-2 md:hidden">
+                          Limitation
+                        </div>
+                        <div className="text-gray-100 font-bold text-base leading-snug">
+                          {item.limitation}
+                        </div>
+                      </div>
+
+                      {/* Route A */}
+                      <div className="md:col-span-4 md:border-l md:border-white/10 md:pl-4">
+                        <div className="text-[10px] tracking-[0.3em] font-mono text-brand-purple uppercase mb-2 md:hidden">
+                          Route A
+                        </div>
+                        <div className="text-gray-400 text-sm md:text-base leading-relaxed">
+                          {item.routeA}
+                        </div>
+                      </div>
+
+                      {/* Route B */}
+                      <div className="md:col-span-4 md:border-l md:border-white/10 md:pl-4">
+                        <div className="text-[10px] tracking-[0.3em] font-mono text-brand-pink uppercase mb-2 md:hidden">
+                          Route B
+                        </div>
+                        <div className="text-gray-300 text-sm md:text-base leading-relaxed">
+                          {item.routeB}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────
+          03 — AT A GLANCE
           ───────────────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 relative">
         <div className="absolute inset-0 pointer-events-none">
@@ -95,7 +382,7 @@ export default function TeamDurantPage() {
             <ScrollAnimation>
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-pink uppercase whitespace-nowrap">
-                  02 — At a Glance
+                  03 — At a Glance
                 </span>
                 <div className="flex-1 h-px bg-gradient-to-r from-brand-pink/40 to-transparent" />
               </div>
@@ -175,7 +462,7 @@ export default function TeamDurantPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          03 — ROUTE A DEEP DIVE
+          04 — ROUTE A DEEP DIVE
           ───────────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 lg:py-40 relative">
         <div className="container mx-auto px-6">
@@ -183,7 +470,7 @@ export default function TeamDurantPage() {
             <ScrollAnimation>
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-purple uppercase whitespace-nowrap">
-                  03 — Route A
+                  04 — Route A
                 </span>
                 <div className="flex-1 h-px bg-gradient-to-r from-brand-purple/40 to-transparent" />
               </div>
@@ -323,7 +610,7 @@ export default function TeamDurantPage() {
       </div>
 
       {/* ─────────────────────────────────────────────────────────
-          04 — ROUTE B DEEP DIVE
+          05 — ROUTE B DEEP DIVE
           ───────────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 lg:py-40 relative">
         <div className="absolute inset-0 pointer-events-none">
@@ -335,7 +622,7 @@ export default function TeamDurantPage() {
             <ScrollAnimation>
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-pink uppercase whitespace-nowrap">
-                  04 — Route B
+                  05 — Route B
                 </span>
                 <div className="flex-1 h-px bg-gradient-to-r from-brand-pink/40 to-transparent" />
               </div>
@@ -484,7 +771,7 @@ export default function TeamDurantPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          05 — SUMMARY
+          06 — SUMMARY
           ───────────────────────────────────────────────────────── */}
       <section className="py-32 md:py-40 lg:py-48 relative">
         <div className="absolute inset-0 pointer-events-none">
@@ -494,7 +781,7 @@ export default function TeamDurantPage() {
           <div className="max-w-5xl mx-auto text-center">
             <ScrollAnimation>
               <div className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-gray-500 uppercase mb-10">
-                05 — Summary
+                06 — Summary
               </div>
             </ScrollAnimation>
 
@@ -531,7 +818,7 @@ export default function TeamDurantPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          06 — CONTACT
+          07 — CONTACT
           ───────────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 lg:py-40 relative border-t border-white/5">
         <div className="container mx-auto px-6">
@@ -539,7 +826,7 @@ export default function TeamDurantPage() {
             <ScrollAnimation>
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-purple uppercase whitespace-nowrap">
-                  06 — Next Step
+                  07 — Next Step
                 </span>
                 <div className="flex-1 h-px bg-gradient-to-r from-brand-purple/40 to-transparent" />
               </div>
