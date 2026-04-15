@@ -117,7 +117,98 @@ export default function TeamDurantPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          02 — CURRENT SITE ANALYSIS
+          02 — AT A GLANCE
+          ───────────────────────────────────────────────────────── */}
+      <section className="py-20 md:py-28 relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] max-w-[120vw] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.1)_0%,_transparent_70%)]" />
+        </div>
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-6xl mx-auto">
+            <ScrollAnimation>
+              <div className="flex items-center gap-4 mb-10">
+                <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-pink uppercase whitespace-nowrap">
+                  02 — At a Glance
+                </span>
+                <div className="flex-1 h-px bg-gradient-to-r from-brand-pink/40 to-transparent" />
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-14 leading-[1.05] tracking-tight">
+                <span className="text-gray-100">Two routes.</span>{' '}
+                <span className={`${serif.className} italic font-normal bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent`}>
+                  Two prices.
+                </span>
+              </h2>
+            </ScrollAnimation>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* Route A Quick Card */}
+              <ScrollAnimation delay={0.1}>
+                <div className="group relative p-8 md:p-10 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-brand-purple/40 hover:bg-gray-900/70 transition-all duration-500 h-full">
+                  <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-brand-purple/60 to-transparent" />
+                  <div className="text-[10px] tracking-[0.35em] font-mono text-gray-500 uppercase mb-5">
+                    Route A
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8 leading-tight">
+                    Squarespace
+                  </h3>
+                  <div className="mb-2">
+                    <span className="text-xs tracking-widest font-mono text-gray-500 uppercase block mb-2">
+                      Starting at
+                    </span>
+                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent leading-none">
+                      <PriceCounter value={2500} />
+                    </div>
+                  </div>
+                  <div className="text-base text-gray-400 mt-3 mb-8">
+                    plus{' '}
+                    <span className="text-gray-200 font-semibold">$300/month</span>{' '}
+                    management
+                  </div>
+                  <div className="h-px bg-white/5 mb-6" />
+                  <p className="text-gray-400 leading-relaxed">
+                    Stay on the existing platform. Add a shop. Manage everything going
+                    forward.
+                  </p>
+                </div>
+              </ScrollAnimation>
+
+              {/* Route B Quick Card */}
+              <ScrollAnimation delay={0.2}>
+                <div className="group relative p-8 md:p-10 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-brand-pink/40 hover:bg-gray-900/70 transition-all duration-500 h-full">
+                  <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-brand-pink/60 to-transparent" />
+                  <div className="text-[10px] tracking-[0.35em] font-mono text-gray-500 uppercase mb-5">
+                    Route B
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8 leading-tight">
+                    Custom Build
+                  </h3>
+                  <div className="mb-2">
+                    <span className="text-xs tracking-widest font-mono text-gray-500 uppercase block mb-2">
+                      Starting at
+                    </span>
+                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent leading-none">
+                      <PriceCounter value={10000} />
+                    </div>
+                  </div>
+                  <div className="text-base text-gray-400 mt-3 mb-8">
+                    plus{' '}
+                    <span className="text-gray-200 font-semibold">$600/month</span>{' '}
+                    management
+                  </div>
+                  <div className="h-px bg-white/5 mb-6" />
+                  <p className="text-gray-400 leading-relaxed">
+                    Full rebuild on a modern stack. Custom design and development with no
+                    platform constraints.
+                  </p>
+                </div>
+              </ScrollAnimation>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────
+          03 — CURRENT SITE ANALYSIS
           ───────────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 lg:py-40 relative">
         <div className="absolute inset-0 pointer-events-none">
@@ -129,7 +220,7 @@ export default function TeamDurantPage() {
             <ScrollAnimation>
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-purple uppercase whitespace-nowrap">
-                  02 — Current Site Analysis
+                  03 — Current Site Analysis
                 </span>
                 <div className="flex-1 h-px bg-gradient-to-r from-brand-purple/40 to-transparent" />
               </div>
@@ -366,97 +457,6 @@ export default function TeamDurantPage() {
                 </div>
               </div>
             </ScrollAnimation>
-          </div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────
-          03 — AT A GLANCE
-          ───────────────────────────────────────────────────────── */}
-      <section className="py-20 md:py-28 relative">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] max-w-[120vw] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.1)_0%,_transparent_70%)]" />
-        </div>
-        <div className="container mx-auto px-6 relative">
-          <div className="max-w-6xl mx-auto">
-            <ScrollAnimation>
-              <div className="flex items-center gap-4 mb-10">
-                <span className="text-[10px] md:text-xs tracking-[0.35em] font-mono text-brand-pink uppercase whitespace-nowrap">
-                  03 — At a Glance
-                </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-brand-pink/40 to-transparent" />
-              </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-14 leading-[1.05] tracking-tight">
-                <span className="text-gray-100">Two routes.</span>{' '}
-                <span className={`${serif.className} italic font-normal bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent`}>
-                  Two prices.
-                </span>
-              </h2>
-            </ScrollAnimation>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {/* Route A Quick Card */}
-              <ScrollAnimation delay={0.1}>
-                <div className="group relative p-8 md:p-10 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-brand-purple/40 hover:bg-gray-900/70 transition-all duration-500 h-full">
-                  <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-brand-purple/60 to-transparent" />
-                  <div className="text-[10px] tracking-[0.35em] font-mono text-gray-500 uppercase mb-5">
-                    Route A
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8 leading-tight">
-                    Squarespace
-                  </h3>
-                  <div className="mb-2">
-                    <span className="text-xs tracking-widest font-mono text-gray-500 uppercase block mb-2">
-                      Starting at
-                    </span>
-                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent leading-none">
-                      <PriceCounter value={2500} />
-                    </div>
-                  </div>
-                  <div className="text-base text-gray-400 mt-3 mb-8">
-                    plus{' '}
-                    <span className="text-gray-200 font-semibold">$300/month</span>{' '}
-                    management
-                  </div>
-                  <div className="h-px bg-white/5 mb-6" />
-                  <p className="text-gray-400 leading-relaxed">
-                    Stay on the existing platform. Add a shop. Manage everything going
-                    forward.
-                  </p>
-                </div>
-              </ScrollAnimation>
-
-              {/* Route B Quick Card */}
-              <ScrollAnimation delay={0.2}>
-                <div className="group relative p-8 md:p-10 bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-3xl hover:border-brand-pink/40 hover:bg-gray-900/70 transition-all duration-500 h-full">
-                  <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-brand-pink/60 to-transparent" />
-                  <div className="text-[10px] tracking-[0.35em] font-mono text-gray-500 uppercase mb-5">
-                    Route B
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-100 mb-8 leading-tight">
-                    Custom Build
-                  </h3>
-                  <div className="mb-2">
-                    <span className="text-xs tracking-widest font-mono text-gray-500 uppercase block mb-2">
-                      Starting at
-                    </span>
-                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-brand-pink to-brand-purple bg-clip-text text-transparent leading-none">
-                      <PriceCounter value={10000} />
-                    </div>
-                  </div>
-                  <div className="text-base text-gray-400 mt-3 mb-8">
-                    plus{' '}
-                    <span className="text-gray-200 font-semibold">$600/month</span>{' '}
-                    management
-                  </div>
-                  <div className="h-px bg-white/5 mb-6" />
-                  <p className="text-gray-400 leading-relaxed">
-                    Full rebuild on a modern stack. Custom design and development with no
-                    platform constraints.
-                  </p>
-                </div>
-              </ScrollAnimation>
-            </div>
           </div>
         </div>
       </section>
